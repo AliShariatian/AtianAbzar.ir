@@ -11,10 +11,10 @@ export const navbarItems: navbarItemsType[] = [{ slug: "/", title: "جـعـبـ
 
 // Home page
 export const HomePageTexts: {
-   aliShariatian: string;
+   toolBox: string;
    description: string;
 } = {
-   aliShariatian: "جــعــبــه‌ابــزار",
+   toolBox: "جــعــبــه‌ابــزار",
    description: "مرجع ابزارهای برنامه‌نویسی فرانت‌اند",
 };
 
