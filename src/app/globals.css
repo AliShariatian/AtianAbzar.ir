@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+   scroll-behavior: smooth;
    color-scheme: light;
    --slate100: #f1f5f9;
 }
@@ -20,12 +21,12 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-   background: #94a3b8; /* stale-400 */
+   background: #e2e8f0; /* stale-200 */
 }
 
 body::-webkit-scrollbar-thumb {
    border-radius: 9px;
-   background-color: #cbd5e1; /* stale-300 */
+   background-color: #94a3b8; /* stale-400 */
    outline-width: 0;
 }
 
@@ -42,8 +43,8 @@ body::-webkit-scrollbar-thumb {
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   width: 70%;
-   height: 80%;
+   width: 80%;
+   height: 100%;
    border-radius: 30%;
    background: var(--slate100);
    filter: blur(90px);

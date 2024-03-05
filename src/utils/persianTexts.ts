@@ -7,7 +7,11 @@ export type navbarItemsType = {
    title: string;
 };
 
-export const navbarItems: navbarItemsType[] = [{ slug: "/", title: "جـعـبـه ابـزار" }];
+export const navbarItems: navbarItemsType[] = [
+   { slug: "/", title: "جـعـبـه ابـزار" },
+   { slug: "", title: "" },
+   { slug: "/#toolbox", title: "لیست ابزارها" },
+];
 
 // Home page
 export const HomePageTexts: {
