@@ -8,7 +8,7 @@ import { danaFont, jetBrainsFont, morabbaFont } from "@/utils/font";
 // STYLE
 import "./globals.css";
 // COMPONENT
-import { Navbar } from "@/components";
+import { Navbar, PageLoadingProgressBar } from "@/components";
 // -------------------------------------------------------------------------------------
 
 export const metadata: Metadata = {
@@ -22,6 +22,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }): JSX.Element => {
          <body
             className={`${danaFont.variable} ${morabbaFont.variable} ${jetBrainsFont.variable} bgDotPattern relative overflow-x-hidden bg-slate-100 py-32 font-dana text-slate-700 transition-all duration-200 ease-in xl:pt-40`}
          >
+            <PageLoadingProgressBar />
             <Navbar />
             {children}
          </body>
