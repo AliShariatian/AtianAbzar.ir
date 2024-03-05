@@ -6,7 +6,7 @@ const ToolsPanel: FC = (): JSX.Element => {
    return (
       <div id="toolbox" className="flex w-11/12 flex-col justify-center">
          {/* Title */}
-         <h2 className="mx-auto mb-16 font-morabba text-4xl">لیست ابزارها</h2>
+         <h2 className="mx-auto mb-16 animate-bounce text-4xl font-bold">لیست ابزارها</h2>
 
          {/* Tools list */}
          <div dir="ltr" className="grid w-full grid-cols-1 gap-4 rounded-xl border-2 border-dashed bg-slate-100 p-12 xl:grid-cols-5">

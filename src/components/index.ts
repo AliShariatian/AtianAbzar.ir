@@ -1,7 +1,7 @@
 // UI
-import TiltEffect from "./UI/TiltEffect";
 import Navbar from "./UI/Navbar";
 import Social from "./UI/Social";
+import TiltEffect from "./UI/TiltEffect";
 
 // Tools
 import ToolBox from "./tools/ToolBox";

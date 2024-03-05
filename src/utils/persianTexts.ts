@@ -23,4 +23,4 @@ export const HomePageTexts: {
 };
 
 // 404 NotFound Page
-export const warning404Text: string = "اشتباه اومدی عزیرم! بهتره برگردیم خونه";
+export const warning404Text: string = "اشتباه اومدی عزیرم!";
