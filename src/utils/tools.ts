@@ -4,7 +4,7 @@ export type ToolsType = {
 };
 
 export const tools: ToolsType[] = [
-   { title: "Tool 1", slug: "1" },
+   { title: "Rem-Px Converter", slug: "px-rem" },
    { title: "Tool 2", slug: "2" },
    { title: "Tool 3", slug: "3" },
    { title: "Tool 4", slug: "4" },

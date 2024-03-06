@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+   input[type="number"].input-arrow-hide::-webkit-inner-spin-button,
+   input[type="number"].input-arrow-hide::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+   }
+}
+
 :root {
    scroll-behavior: smooth;
    color-scheme: light;
@@ -49,12 +57,6 @@ body::-webkit-scrollbar-thumb {
    background: var(--slate100);
    filter: blur(90px);
    z-index: -100;
-}
-
-/* Gradient effect */
-.gradient {
-   background-image: linear-gradient(270deg, hsl(221deg 73% 70%) 74%, hsl(220deg 76% 51%) 100%);
-   filter: blur(125px);
 }
 
 /*  */
