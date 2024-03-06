@@ -26,7 +26,7 @@ export const Inputs: FC = (): JSX.Element => {
    };
 
    return (
-      <>
+      <div className="flex gap-0.5">
          {/* REM */}
          <div className="flex flex-col gap-2">
             <label htmlFor="px" className="mx-auto">
@@ -40,10 +40,10 @@ export const Inputs: FC = (): JSX.Element => {
                max={1000}
                value={rem}
                onChange={remChangeHandler}
-               className="input-arrow-hide w-28 rounded-l-xl border-r-2 border-slate-100 py-5 text-center shadow outline-none xl:w-44"
+               className="input-arrow-hide w-28 rounded-l-xl bg-slate-50 py-5 text-center shadow-md outline-none xl:w-44"
             />
          </div>
-         
+
          {/* PX */}
          <div className="flex flex-col gap-2">
             <label htmlFor="px" className="mx-auto">
@@ -57,9 +57,9 @@ export const Inputs: FC = (): JSX.Element => {
                max={1000}
                value={px}
                onChange={pxChangeHandler}
-               className="input-arrow-hide w-28 rounded-r-xl py-5 text-center shadow outline-none xl:w-44"
+               className="input-arrow-hide w-28 rounded-r-xl bg-slate-50 py-5 text-center shadow-md outline-none xl:w-44"
             />
          </div>
-      </>
+      </div>
    );
 };
