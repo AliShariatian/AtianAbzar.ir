@@ -6,20 +6,20 @@ import { FC, useState } from "react";
 import { valueValidation } from "./valueValidation";
 
 export const Inputs: FC = (): JSX.Element => {
-   const [px, setPx] = useState<number>(16);
-   const [rem, setRem] = useState<number>(1);
+   const [px, setPx] = useState<string>("16");
+   const [rem, setRem] = useState<string>("1");
 
-   const pxChangeHandler = async (ev: React.ChangeEvent<HTMLInputElement>) => {
-      const pxValue: number = valueValidation(ev.target.value);
-      const newRem: number = pxValue / 16;
+   const pxChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+      const pxValue: string = valueValidation(ev.target.value);
+      const newRem: string = (Number(pxValue) / 16).toString();
 
       setPx(pxValue);
       setRem(newRem);
    };
 
    const remChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
-      const remValue: number = valueValidation(ev.target.value);
-      const newPx: number = remValue * 16;
+      const remValue: string = valueValidation(ev.target.value);
+      const newPx: string = (Number(remValue) * 16).toString();
 
       setRem(remValue);
       setPx(newPx);
@@ -41,10 +41,9 @@ export const Inputs: FC = (): JSX.Element => {
                max={1000}
                value={rem}
                onChange={remChangeHandler}
-               className="input-arrow-hide w-36 rounded-l-xl border-r-2 border-slate-100 py-4 text-center shadow outline-none"
+               className="input-arrow-hide w-44 rounded-l-xl border-r-2 border-slate-100 py-5 text-center shadow outline-none"
             />
          </div>
-         
          {/* PX */}
          <div className="flex flex-col gap-2">
             <label htmlFor="px" className="mx-auto">
@@ -58,7 +57,7 @@ export const Inputs: FC = (): JSX.Element => {
                max={1000}
                value={px}
                onChange={pxChangeHandler}
-               className="input-arrow-hide w-36 rounded-r-xl py-4 text-center shadow outline-none"
+               className="input-arrow-hide w-44 rounded-r-xl py-5 text-center shadow outline-none"
             />
          </div>
       </>
