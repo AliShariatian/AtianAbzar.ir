@@ -8,23 +8,24 @@ import { danaFont, jetBrainsFont, morabbaFont } from "@/utils/font";
 // STYLE
 import "./globals.css";
 // COMPONENT
-import { Navbar, PageLoadingProgressBar } from "@/components";
+import { Navbar, Footer, PageLoadingProgressBar } from "@/components";
 // -------------------------------------------------------------------------------------
 
 export const metadata: Metadata = {
-   title: `${metaTitle} | ابزارهای برنامه‌نویسی فرانت‌اند`,
-   description: "جعبه ابزار برنامه نویسی",
+   title: `${metaTitle} | "مرجع ابزارهای محاسباتی روزمره"`,
+   description: "مرجع ابزارهای محاسباتی روزمره | محاسبه | محاسبه آنلاین",
 };
 
 const RootLayout: FC<PropsWithChildren> = ({ children }): JSX.Element => {
    return (
-      <html lang="fa" dir="rtl">
+      <html lang="fa" dir="rtl" className="h-full">
          <body
-            className={`${danaFont.variable} ${morabbaFont.variable} ${jetBrainsFont.variable} bgDotPattern relative overflow-x-hidden bg-slate-100 py-36 font-dana text-slate-700 transition-all duration-200 ease-in`}
+            className={`${danaFont.variable} ${morabbaFont.variable} ${jetBrainsFont.variable} bgDotPattern h-full relative overflow-x-hidden bg-slate-100 pt-36 font-dana text-slate-700 transition-all duration-200 ease-in`}
          >
             <PageLoadingProgressBar />
             <Navbar />
             {children}
+            <Footer />
          </body>
       </html>
    );

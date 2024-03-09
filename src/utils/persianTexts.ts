@@ -1,5 +1,5 @@
 // Metadata
-export const metaTitle: string = "جعبه ابزار";
+export const metaTitle: string = "آتیان ابزار";
 
 // Navbar
 export type navbarItemsType = {
@@ -8,9 +8,9 @@ export type navbarItemsType = {
 };
 
 export const navbarItems: navbarItemsType[] = [
-   { slug: "/", title: "جـعـبـه ابـزار" },
+   { slug: "/", title: "آتـیـان ابـزار" },
    { slug: "", title: "" },
-   { slug: "/#toolbox", title: "لیست ابزارها" },
+   { slug: "/#tools", title: "لیست ابزارها" },
 ];
 
 // Home page
@@ -18,9 +18,9 @@ export const HomePageTexts: {
    toolBox: string;
    description: string;
 } = {
-   toolBox: "جــعــبــه‌ابــزار",
-   description: "مرجع ابزارهای برنامه‌نویسی فرانت‌اند",
+   toolBox: "آتــیــان ابــزار",
+   description: "مرجع ابزارهای محاسباتی روزمره",
 };
 
 // 404 NotFound Page
-export const warning404Text: string = "اشتباه اومدی عزیرم!";
+export const warning404Text: string = "اشتباه اومدی، این صفحه وجود نداره!";

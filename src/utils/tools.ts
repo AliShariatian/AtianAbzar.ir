@@ -3,7 +3,9 @@ export type ToolsType = {
    slug: string;
 };
 
+// conversion of unit => cof
+
 export const tools: ToolsType[] = [
-   { title: "Rem-Px Converter", slug: "px-rem" },
-   { title: "Coming Soon...", slug: "/" },
+   { title: "تبدیل واحد رِم (Rem) به پیکسل (Px) و برعکس", slug: "cou/px-rem" },
+   { title: "بزودی...", slug: "/" },
 ];
