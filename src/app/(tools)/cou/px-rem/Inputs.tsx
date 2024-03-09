@@ -29,10 +29,10 @@ export const Inputs: FC = (): JSX.Element => {
    return (
       <>
          {/* REM */}
-         <Input id="rem" label="Rem" onChange={remChangeHandler} placeholder="Rem" value={rem} min={0} max={1000} />
+         <Input id="rem" label="Rem" onChange={remChangeHandler} placeholder="Rem" value={rem} />
 
          {/* PX */}
-         <Input id="px" label="Px" onChange={pxChangeHandler} placeholder="Px" value={px} min={0} max={1000} />
+         <Input id="px" label="Px" onChange={pxChangeHandler} placeholder="Px" value={px} />
       </>
    );
 };
