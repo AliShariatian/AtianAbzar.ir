@@ -6,7 +6,7 @@ import { FC, useState } from "react";
 import { valueValidation } from "@/utils/valueValidation";
 import { Input } from "@/components";
 
-export const Inputs: FC = (): JSX.Element => {
+export const Logic: FC = (): JSX.Element => {
    const [px, setPx] = useState<string>("16");
    const [rem, setRem] = useState<string>("1");
 

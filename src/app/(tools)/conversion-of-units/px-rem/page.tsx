@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
 import { FC } from "react";
+import type { Metadata } from "next";
 import { metaTitle } from "@/utils/persianTexts";
 // COMPONENT
-import { Inputs } from "./Inputs";
 import { ToolPageContainer } from "@/components";
+import { Logic } from "./Logic";
 
 export const metadata: Metadata = {
    title: `${metaTitle} | تبدیل Px به Rem و برعکس`,
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const PxRem: FC = (): JSX.Element => {
-   const rightSide = <Inputs />;
+   const rightSide = <Logic />;
    const leftSide = "";
 
    return <ToolPageContainer leftSide={leftSide} rightSide={rightSide} />;
