@@ -1,8 +1,8 @@
 import { FC } from "react";
-import { ToolsType } from "@/utils/data/tools";
+import { toolsType } from "@/utils/data/tools";
 import Link from "next/link";
 
-const ToolBox: FC<ToolsType> = ({ title, slug }): JSX.Element => {
+const VitrineButton: FC<toolsType> = ({ title, slug }): JSX.Element => {
    const hoverScaleValue = { "--hover-scale-value": 1.04 } as React.CSSProperties;
 
    return (
@@ -12,4 +12,4 @@ const ToolBox: FC<ToolsType> = ({ title, slug }): JSX.Element => {
    );
 };
 
-export default ToolBox;
+export default VitrineButton;

@@ -21,11 +21,11 @@ const Navbar: FC = (): JSX.Element => {
                {navbarItems.map((item: navbarItemsType, index: number) => {
                   {
                      if (index === 1) {
-                        return <div key={index} className="mx-2 my-auto h-6 w-0 border-l border-slate-800/30 p-0" />;
+                        return <div key={index} className={`${item.className} mx-2 my-auto h-6 w-0 border-l border-slate-800/30 p-0`} />;
                      }
 
                      return (
-                        <Link onClick={() => ClickForScrollHandler(item.slug)} href={item.slug} key={index} className={`p-2 font-extrabold`}>
+                        <Link onClick={() => ClickForScrollHandler(item.slug)} href={item.slug} key={index} className={`${item.className} p-2 font-extrabold`}>
                            <li>{item.title}</li>
                         </Link>
                      );

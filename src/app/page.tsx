@@ -6,7 +6,7 @@ import { FC } from "react";
 import { HomePageTexts } from "@/utils/data/persianTexts";
 // COMPONENT
 import { motion } from "framer-motion";
-import { TiltEffect, ToolsPanel } from "@/components";
+import { TiltEffect, Vitrine } from "@/components";
 // -------------------------------------------
 
 const HomePage: FC = (): JSX.Element => {
@@ -39,10 +39,9 @@ const HomePage: FC = (): JSX.Element => {
             </main>
          </div>
 
-         {/* ToolsPanel */}
-         <section className="mt-52 flex justify-center">
-            <ToolsPanel />
-         </section>
+         {/* Vitrines */}
+         <Vitrine title="دسته‌بندی‌ها" id="categories" />
+         <Vitrine title="لیست ابزارها" id="tools" />
       </>
    );
 };

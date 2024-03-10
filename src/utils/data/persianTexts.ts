@@ -5,12 +5,14 @@ export const metaTitle: string = "آتیان ابزار";
 export type navbarItemsType = {
    slug: string;
    title: string;
+   className: string;
 };
 
 export const navbarItems: navbarItemsType[] = [
-   { slug: "/", title: "آتـیـان ابـزار" },
-   { slug: "", title: "" },
-   { slug: "/#tools", title: "لیست ابزارها" },
+   { slug: "/", title: "آتـیـان ابـزار", className: "" },
+   { slug: "", title: "", className: "hidden xl:block" },
+   { slug: "/#categories", title: "دسته‌بندی‌ها", className: "hidden xl:block" },
+   { slug: "/#tools", title: "لیست ابزارها", className: "hidden xl:block" },
 ];
 
 // Home page
