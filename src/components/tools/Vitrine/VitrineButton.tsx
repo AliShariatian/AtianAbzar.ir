@@ -1,8 +1,12 @@
 import { FC } from "react";
-import { toolsType } from "@/utils/data/tools";
 import Link from "next/link";
 
-const VitrineButton: FC<toolsType> = ({ title, slug }): JSX.Element => {
+type PropsType = {
+   title: string;
+   slug: string;
+};
+
+const VitrineButton: FC<PropsType> = ({ title, slug }): JSX.Element => {
    const hoverScaleValue = { "--hover-scale-value": 1.04 } as React.CSSProperties;
 
    return (
