@@ -1,7 +1,7 @@
 "use client";
 
 import { FC } from "react";
-import { navbarItems, navbarItemsType } from "@/utils/persianTexts";
+import { navbarItems, navbarItemsType } from "@/utils/data/persianTexts";
 
 // COMPONENT
 import Link from "next/link";

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { ToolsType } from "@/utils/tools";
+import { ToolsType } from "@/utils/data/tools";
 import Link from "next/link";
 
 const ToolBox: FC<ToolsType> = ({ title, slug }): JSX.Element => {

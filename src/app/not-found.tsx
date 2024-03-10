@@ -1,7 +1,7 @@
 // TYPE
 import { FC } from "react";
 // UTIL
-import { warning404Text } from "@/utils/persianTexts";
+import { warning404Text } from "@/utils/data/persianTexts";
 // COMPONENT
 import Link from "next/link";
 // ---------------------------------

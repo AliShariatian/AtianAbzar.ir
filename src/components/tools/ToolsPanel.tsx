@@ -1,6 +1,6 @@
 import { FC } from "react";
 import ToolBox from "./ToolBox";
-import { tools, ToolsType } from "@/utils/tools";
+import { tools, ToolsType } from "@/utils/data/tools";
 import arrowDownIcon from "../../../public/img/arrow-down.svg";
 import Image from "next/image";
 

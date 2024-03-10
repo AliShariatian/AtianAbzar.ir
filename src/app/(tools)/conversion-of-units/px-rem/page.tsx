@@ -1,6 +1,6 @@
 import { FC } from "react";
 import type { Metadata } from "next";
-import { metaTitle } from "@/utils/persianTexts";
+import { metaTitle } from "@/utils/data/persianTexts";
 // COMPONENT
 import { ToolPageContainer } from "@/components";
 import { Logic } from "./Logic";

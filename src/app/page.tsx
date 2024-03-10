@@ -3,7 +3,7 @@
 // TYPE
 import { FC } from "react";
 // UTIL
-import { HomePageTexts } from "@/utils/persianTexts";
+import { HomePageTexts } from "@/utils/data/persianTexts";
 // COMPONENT
 import { motion } from "framer-motion";
 import { TiltEffect, ToolsPanel } from "@/components";

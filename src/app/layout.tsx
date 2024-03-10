@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import { FC, PropsWithChildren } from "react";
 // TEXTS
-import { metaTitle } from "@/utils/persianTexts";
+import { metaTitle } from "@/utils/data/persianTexts";
 // FONT
 import { danaFont, jetBrainsFont, morabbaFont } from "@/utils/font";
 // STYLE
@@ -12,7 +12,7 @@ import { Navbar, Footer, PageLoadingProgressBar } from "@/components";
 // -------------------------------------------------------------------------------------
 
 export const metadata: Metadata = {
-   title: `${metaTitle} | "مرجع ابزارهای محاسباتی روزمره"`,
+   title: `${metaTitle} | مرجع ابزارهای محاسباتی روزمره`,
    description: "مرجع ابزارهای محاسباتی روزمره | محاسبه | محاسبه آنلاین",
 };
 

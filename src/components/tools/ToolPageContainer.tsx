@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 import { usePathname } from "next/navigation";
-import { tools, ToolsType } from "@/utils/tools";
+import { tools, ToolsType } from "@/utils/data/tools";
 
 type PropsType = {
    leftSide: React.ReactNode;
