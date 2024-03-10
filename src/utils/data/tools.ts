@@ -12,7 +12,6 @@ export const tools: toolsType[] = [
 
    // Math
    { title: "محاسبه مساحت مربع", slug: "math/square-area", category: "math" },
-   { title: "محاسبه مساحت مثلث", slug: "math/triangle-area", category: "math" },
 
    // Sports
    { title: "محاسبه شاخص توده بدنی (BMI)", slug: "sports/calc-bmi", category: "sports" },

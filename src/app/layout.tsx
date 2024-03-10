@@ -20,7 +20,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }): JSX.Element => {
    return (
       <html lang="fa" dir="rtl" className="h-full">
          <body
-            className={`${danaFont.variable} ${morabbaFont.variable} ${jetBrainsFont.variable} bgDotPattern h-full relative overflow-x-hidden bg-slate-100 pt-36 font-dana text-slate-700 transition-all duration-200 ease-in`}
+            className={`${danaFont.variable} ${morabbaFont.variable} ${jetBrainsFont.variable} bgDotPattern relative h-full overflow-x-hidden bg-slate-100 pt-36 font-dana text-slate-700 transition-all duration-200 ease-in`}
          >
             <PageLoadingProgressBar />
             <Navbar />

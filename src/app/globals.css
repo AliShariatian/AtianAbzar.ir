@@ -10,6 +10,12 @@
    }
 }
 
+@layer components {
+   .vitrineList {
+      @apply grid w-full grid-cols-1 gap-4 py-9 xl:py-12;
+   }
+}
+
 :root {
    scroll-behavior: smooth;
    color-scheme: light;
