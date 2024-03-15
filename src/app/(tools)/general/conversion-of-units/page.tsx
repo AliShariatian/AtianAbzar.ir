@@ -6,8 +6,8 @@ import { ToolPageContainer } from "@/components";
 import { Logic } from "./Logic";
 
 export const metadata: Metadata = {
-   title: `${metaTitle} | تبدیل Px به Rem و برعکس`,
-   description: "تبدیل px به rem | تبدیل rem به px",
+   title: `${metaTitle} | تبدیل واحد`,
+   description: "تبدیل واحد",
 };
 
 const PxRem: FC = (): JSX.Element => {

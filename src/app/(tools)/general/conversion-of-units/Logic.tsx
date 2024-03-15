@@ -4,7 +4,8 @@
 
 import { FC, useState } from "react";
 import { valueValidation } from "@/utils/numberValidation";
-import { Input } from "@/components";
+import { Input, Select, Space } from "@/components";
+import { labels } from "./selectLabels";
 
 export const Logic: FC = (): JSX.Element => {
    const [px, setPx] = useState<string>("16");
@@ -28,6 +29,11 @@ export const Logic: FC = (): JSX.Element => {
 
    return (
       <>
+         {/* User select */}
+         <Select labels={labels} />
+
+         <Space />
+
          {/* REM */}
          <Input id="rem" label="Rem" onChange={remChangeHandler} placeholder="Rem" value={rem} />
 
