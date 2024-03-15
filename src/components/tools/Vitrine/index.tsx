@@ -5,8 +5,8 @@ import arrowDownIcon from "../../../../public/img/arrow-down.svg";
 import Image from "next/image";
 import { VitrineButton } from "@/components";
 // DATA
-import { tools } from "@/utils/data/tools";
-import { categories } from "@/utils/data/categories";
+import { tools } from "@/public/data/tools/tools";
+import { categories } from "@/public/data/tools/categories";
 
 type PropsType = {
    id: "tools" | "categories";

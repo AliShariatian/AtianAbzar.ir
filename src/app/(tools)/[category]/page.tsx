@@ -2,8 +2,8 @@
 
 import { FC } from "react";
 import { usePathname } from "next/navigation";
-import { tools } from "@/utils/data/tools";
-import { categories } from "@/utils/data/categories";
+import { tools } from "@/public/data/tools/tools";
+import { categories } from "@/public/data/tools/categories";
 import { MainTitle, VitrineButton } from "@/components";
 
 const Category: FC = (): JSX.Element => {

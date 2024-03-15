@@ -2,7 +2,7 @@ import localFont from "next/font/local";
 import { JetBrains_Mono } from "next/font/google";
 
 // Heading font
-export const morabbaFont = localFont({ src: "../../../public/font/Morabba-Medium.ttf", variable: "--font-morabba" });
+export const morabbaFont = localFont({ src: "./Morabba-Medium.ttf", variable: "--font-morabba" });
 
 // Code font
 export const jetBrainsFont = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetBrains" });
@@ -11,27 +11,27 @@ export const jetBrainsFont = JetBrains_Mono({ subsets: ["latin"], variable: "--f
 export const danaFont = localFont({
    src: [
       {
-         path: "../../../public/font/DanaFaNum-Light.ttf",
+         path: "./DanaFaNum-Light.ttf",
          weight: "300",
          style: "normal",
       },
       {
-         path: "../../../public/font/DanaFaNum-Regular.ttf",
+         path: "./DanaFaNum-Regular.ttf",
          weight: "400",
          style: "normal",
       },
       {
-         path: "../../../public/font/DanaFaNum-Medium.ttf",
+         path: "./DanaFaNum-Medium.ttf",
          weight: "500",
          style: "normal",
       },
       {
-         path: "../../../public/font/DanaFaNum-DemiBold.ttf",
+         path: "./DanaFaNum-DemiBold.ttf",
          weight: "600",
          style: "normal",
       },
       {
-         path: "../../../public/font/DanaFaNum-Bold.ttf",
+         path: "./DanaFaNum-Bold.ttf",
          weight: "700",
          style: "normal",
       },

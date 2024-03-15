@@ -3,7 +3,7 @@
 // 1 Rem === 16 Px
 
 import { FC, useState } from "react";
-import { valueValidation } from "@/utils/valueValidation";
+import { valueValidation } from "@/utils/numberValidation";
 import { Input } from "@/components";
 
 export const Logic: FC = (): JSX.Element => {

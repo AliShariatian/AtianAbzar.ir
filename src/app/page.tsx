@@ -1,7 +1,7 @@
 // TYPE
 import { FC } from "react";
 // UTIL
-import { HomePageTexts } from "@/utils/data/persianTexts";
+import { HomePageTexts } from "@/public/data/persianTexts";
 // COMPONENT
 import { MainTitle, Vitrine } from "@/components";
 // -------------------------------------------
@@ -14,7 +14,7 @@ const HomePage: FC = (): JSX.Element => {
 
          {/* Vitrines */}
          <Vitrine title="دسته‌بندی‌ها" id="categories" />
-         <Vitrine title="لیست ابزارها" id="tools" />
+         <Vitrine title="همه‌ی ابزارها" id="tools" />
       </div>
    );
 };
