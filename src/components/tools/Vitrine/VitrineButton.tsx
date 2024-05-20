@@ -1,12 +1,12 @@
 import { FC } from "react";
 import Link from "next/link";
 
-type PropsType = {
+type TProps = {
    title: string;
    slug: string;
 };
 
-const VitrineButton: FC<PropsType> = ({ title, slug }): JSX.Element => {
+const VitrineButton: FC<TProps> = ({ title, slug }): JSX.Element => {
    const hoverScaleValue = { "--hover-scale-value": 1.04 } as React.CSSProperties;
 
    return (

@@ -7,7 +7,7 @@ import { valueValidation } from "@/utils/numberValidation";
 import { Input, Select, Space } from "@/components";
 import { labels } from "./selectLabels";
 
-export const Logic: FC = (): JSX.Element => {
+const Logic: FC = (): JSX.Element => {
    const [px, setPx] = useState<string>("16");
    const [rem, setRem] = useState<string>("1");
 
@@ -42,3 +42,5 @@ export const Logic: FC = (): JSX.Element => {
       </>
    );
 };
+
+export default Logic;

@@ -1,10 +1,10 @@
-export type categoriesType = {
+export type TCategories = {
    title: string;
    slug: "general" | "engineering" | "finance" | "health" | "sports";
 };
 
 
-export const categories: categoriesType[] = [
+export const categories: TCategories[] = [
    { title: "عمومی", slug: "general" },
    { title: "مهندسی", slug: "engineering" },
    { title: "مالی", slug: "finance" },

@@ -2,13 +2,13 @@
 export const metaTitle: string = "آتیان ابزار";
 
 // Navbar
-export type navbarItemsType = {
+export type TNavbarItems = {
    slug: string;
    title: string;
    className: string;
 };
 
-export const navbarItems: navbarItemsType[] = [
+export const navbarItems: TNavbarItems[] = [
    { slug: "/", title: "آتـیـان ابـزار", className: "" },
    { slug: "", title: "", className: "hidden xl:block" },
    { slug: "/#categories", title: "دسته‌بندی‌ها", className: "hidden xl:block" },

@@ -6,15 +6,15 @@ import { ToolPageContainer } from "@/components";
 import Logic from "./Logic";
 
 export const metadata: Metadata = {
-   title: `${metaTitle} | تبدیل واحد`,
-   description: "تبدیل واحد",
+   title: `${metaTitle} | محاسبه bmi`,
+   description: "محاسبه bmi | bmi | محاسبه شاخص توده بدنی | شاخص توده بدنی",
 };
 
-const PxRem: FC = (): JSX.Element => {
+const CalcBMI: FC = (): JSX.Element => {
    const rightSide = <Logic />;
    const leftSide = "";
 
    return <ToolPageContainer leftSide={leftSide} rightSide={rightSide} />;
 };
 
-export default PxRem;
+export default CalcBMI;

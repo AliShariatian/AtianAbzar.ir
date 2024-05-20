@@ -1,12 +1,12 @@
 import cn from "@/utils/cn";
 import { FC } from "react";
 
-type PropsType = {
+type TProps = {
    labels: string[];
    className?: string;
 };
 
-const Select: FC<PropsType> = ({ labels, className }): JSX.Element => {
+const Select: FC<TProps> = ({ labels, className }): JSX.Element => {
    return (
       <select className={cn("userHandle text-lg outline-none", className)}>
          {labels.map((item) => (

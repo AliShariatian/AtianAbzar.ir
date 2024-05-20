@@ -1,18 +1,18 @@
-import { categoriesType } from "./categories";
+import { TCategories } from "./categories";
 
-type toolsType = {
+type TTools = {
    title: string;
-   category: categoriesType["slug"];
+   category: TCategories["slug"];
    slug: string;
 };
 
 // ---------------------------------------------------------------------------------------------------------
 // Data
-let general: toolsType[] = [{ title: "تبدیل واحد", slug: "conversion-of-units", category: "general" }];
-let engineering: toolsType[] = [{ title: "محاسبه مساحت", slug: "area-calculation", category: "engineering" }];
-let sport: toolsType[] = [{ title: "محاسبه شاخص توده بدنی (BMI)", slug: "bmi-calculation", category: "sports" }];
-let finance: toolsType[] = [{ title: "محاسبه شاخص توده بدنی (BMI)", slug: "calc-bmi", category: "finance" }];
-let health: toolsType[] = [{ title: "محاسبه شاخص توده بدنی (BMI)", slug: "calc-bmi", category: "health" }];
+let general: TTools[] = [{ title: "تبدیل واحد", slug: "conversion-of-units", category: "general" }];
+let engineering: TTools[] = [{ title: "محاسبه مساحت", slug: "area-calculation", category: "engineering" }];
+let sport: TTools[] = [{ title: "تست اسپورت", slug: "test-sport", category: "sports" }];
+let finance: TTools[] = [{ title: "تست فایننس", slug: "test-finance", category: "finance" }];
+let health: TTools[] = [{ title: "محاسبه شاخص توده بدنی (BMI)", slug: "calc-bmi", category: "health" }];
 
 // ---------------------------------------------------------------------------------------------------------
 // Add category to slug
@@ -23,4 +23,4 @@ finance = finance.map((item) => ({ ...item, slug: `finance/${item.slug}` }));
 health = health.map((item) => ({ ...item, slug: `health/${item.slug}` }));
 
 //Export All Data
-export const tools: toolsType[] = [...general, ...engineering, ...sport, ...finance, ...health];
+export const tools: TTools[] = [...general, ...engineering, ...sport, ...finance, ...health];

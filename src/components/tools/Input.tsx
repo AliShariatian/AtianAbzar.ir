@@ -1,7 +1,7 @@
 import cn from "@/utils/cn";
 import { FC } from "react";
 
-type PropsType = {
+type TProps = {
    id: string;
    min?: number;
    value: string;
@@ -11,7 +11,7 @@ type PropsType = {
    onChange: (ev: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-const Input: FC<PropsType> = ({ id, label, onChange, placeholder, value, min = 0, className }): JSX.Element => {
+const Input: FC<TProps> = ({ id, label, onChange, placeholder, value, min = 0, className }): JSX.Element => {
    return (
       <div className={cn("userHandle", className)}>
          <label htmlFor={id} className="flex items-center text-lg">

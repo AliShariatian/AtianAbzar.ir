@@ -4,12 +4,12 @@ import { FC } from "react";
 import { usePathname } from "next/navigation";
 import { tools } from "@/public/data/tools/tools";
 
-type PropsType = {
+type TProps = {
    leftSide: React.ReactNode;
    rightSide: React.ReactNode;
 };
 
-const ToolPageContainer: FC<PropsType> = ({ rightSide, leftSide }): JSX.Element => {
+const ToolPageContainer: FC<TProps> = ({ rightSide, leftSide }): JSX.Element => {
    const currentPath = usePathname();
 
    const currentPageInfo = tools.find((item) => `/${item.slug}` === currentPath);

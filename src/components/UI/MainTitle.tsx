@@ -4,12 +4,12 @@ import { FC } from "react";
 import { motion } from "framer-motion";
 import { TiltEffect } from "@/components";
 
-type PropsType = {
+type TProps = {
    title: string | undefined;
    description: string;
 };
 
-const MainTitle: FC<PropsType> = ({ description, title }): JSX.Element => {
+const MainTitle: FC<TProps> = ({ description, title }): JSX.Element => {
    return (
       <div className="mt-20 flex flex-col items-center justify-center xl:mt-9">
          {/* TITLE */}

@@ -8,12 +8,12 @@ import { VitrineButton } from "@/components";
 import { tools } from "@/public/data/tools/tools";
 import { categories } from "@/public/data/tools/categories";
 
-type PropsType = {
+type TProps = {
    id: "tools" | "categories";
    title: string;
 };
 
-const Vitrine: FC<PropsType> = ({ title, id }): JSX.Element => {
+const Vitrine: FC<TProps> = ({ title, id }): JSX.Element => {
    const data = id === "tools" ? tools : categories;
 
    return (
