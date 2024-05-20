@@ -12,7 +12,8 @@ import Vitrine from "./tools/Vitrine";
 import Input from "./tools/Input";
 import Select from "./tools/Select";
 import Space from "./tools/Space";
+import Output from "./tools/Output";
 
 // EXPORT
 
-export { TiltEffect, Navbar, Footer, MainTitle, VitrineButton, Vitrine, Input, Select, Space, ToolPageContainer, PageLoadingProgressBar };
+export { TiltEffect, Navbar, Footer, MainTitle, VitrineButton, Vitrine, Input, Select, Space, ToolPageContainer, PageLoadingProgressBar, Output };
