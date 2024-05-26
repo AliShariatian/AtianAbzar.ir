@@ -1,6 +1,6 @@
 export type TCategories = {
    title: string;
-   slug: "general" | "engineering" | "finance" | "health" | "sports";
+   slug: "general" | "engineering" | "finance" | "health" | "sports"| "programming";
 };
 
 
@@ -10,5 +10,6 @@ export const categories: TCategories[] = [
    { title: "مالی", slug: "finance" },
    { title: "ورزشی", slug: "sports" },
    { title: "سلامتی", slug: "health" },
+   { title: "برنامه‌نویسی", slug: "programming" },
 ];
 

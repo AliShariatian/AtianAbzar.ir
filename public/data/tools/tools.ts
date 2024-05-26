@@ -2,25 +2,34 @@ import { TCategories } from "./categories";
 
 type TTools = {
    title: string;
-   category: TCategories["slug"];
    slug: string;
-};
+   category?: TCategories["slug"];
+}[];
 
 // ---------------------------------------------------------------------------------------------------------
 // Data
-let general: TTools[] = [{ title: "تبدیل واحد", slug: "conversion-of-units", category: "general" }];
-let engineering: TTools[] = [{ title: "محاسبه مساحت", slug: "area-calculation", category: "engineering" }];
-let sport: TTools[] = [{ title: "تست اسپورت", slug: "test-sport", category: "sports" }];
-let finance: TTools[] = [{ title: "تست فایننس", slug: "test-finance", category: "finance" }];
-let health: TTools[] = [{ title: "محاسبه شاخص توده بدنی (BMI)", slug: "calc-bmi", category: "health" }];
+let general: TTools = [{ title: "تبدیل واحد", slug: "conversion-of-units" }];
+
+let engineering: TTools = [{ title: "محاسبه مساحت", slug: "area-calculation" }];
+
+let sports: TTools = [{ title: "تست اسپورت", slug: "test-sport" }];
+
+let finance: TTools = [
+   { title: "محاسبه درصد تخفیف", slug: "calc-percentage-discount" },
+   { title: "محاسبه کمیسیون", slug: "calc-commission" },
+];
+
+let health: TTools = [{ title: "محاسبه شاخص توده بدنی (BMI)", slug: "calc-bmi" }];
+let programming: TTools = [{ title: "asf", slug: "asf" }];
 
 // ---------------------------------------------------------------------------------------------------------
-// Add category to slug
-general = general.map((item) => ({ ...item, slug: `general/${item.slug}` }));
-engineering = engineering.map((item) => ({ ...item, slug: `engineering/${item.slug}` }));
-sport = sport.map((item) => ({ ...item, slug: `sports/${item.slug}` }));
-finance = finance.map((item) => ({ ...item, slug: `finance/${item.slug}` }));
-health = health.map((item) => ({ ...item, slug: `health/${item.slug}` }));
+// Add category, And add category to slug
+general = general.map((item) => ({ ...item, category: "general", slug: `general/${item.slug}` }));
+engineering = engineering.map((item) => ({ ...item, category: "engineering", slug: `engineering/${item.slug}` }));
+sports = sports.map((item) => ({ ...item, category: "sports", slug: `sports/${item.slug}` }));
+finance = finance.map((item) => ({ ...item, category: "finance", slug: `finance/${item.slug}` }));
+health = health.map((item) => ({ ...item, category: "health", slug: `health/${item.slug}` }));
+programming = programming.map((item) => ({ ...item, category: "programming", slug: `programming/${item.slug}` }));
 
 //Export All Data
-export const tools: TTools[] = [...general, ...engineering, ...sport, ...finance, ...health];
+export const tools: TTools = [...general, ...engineering, ...sports, ...finance, ...health, ...programming];
