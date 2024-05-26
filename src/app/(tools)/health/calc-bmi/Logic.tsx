@@ -9,8 +9,13 @@ const Logic: FC = (): JSX.Element => {
    const [height, setHeight] = useState<string>("170");
    const [result, setResult] = useState<{ value: number; color: string; description: string }>({ value: 0, color: "", description: "" });
 
-   const heightLabel: string = "قد (سانتی‌متر)" as const;
-   const weightLabel: string = "وزن (کیلوگرم)" as const;
+   const weightLabel: string = "وزن" as const;
+   const weightUnit: string = "کیلوگرم" as const;
+
+   const heightLabel: string = "قد" as const;
+   const heightUnit: string = "سانتی‌متر" as const;
+
+   const resultLabel: string = "نتیجه" as const;
 
    const weightChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
       setWeight(valueValidation(ev.target.value));
@@ -49,15 +54,15 @@ const Logic: FC = (): JSX.Element => {
    return (
       <>
          {/* Weight */}
-         <Input id="weight" label={weightLabel} onChange={weightChangeHandler} placeholder={weightLabel} value={weight} />
+         <Input id="weight" label={weightLabel} unit={weightUnit} onChange={weightChangeHandler} placeholder={weightLabel} value={weight} />
 
          {/* Height */}
-         <Input id="height" label={heightLabel} onChange={heightChangeHandler} placeholder={heightLabel} value={height} />
+         <Input id="height" label={heightLabel} unit={heightUnit} onChange={heightChangeHandler} placeholder={heightLabel} value={height} />
 
          <Space />
 
          {/* Output */}
-         <Output value={result.value} borderColor={result.color} description={result.description} />
+         <Output value={result.value} unit={resultLabel} borderColor={result.color} description={result.description} />
       </>
    );
 };

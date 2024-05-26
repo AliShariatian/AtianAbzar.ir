@@ -1,65 +1,81 @@
 "use client";
 
-import { FC, useEffect, useState } from "react";
+import { FC, memo, useEffect, useState } from "react";
 import { valueValidation } from "@/utils/numberValidation";
 import { Input, Space, Output } from "@/components";
+import { TResultInitialValue } from "./type";
+
+const resultInitialValue: TResultInitialValue = {
+   commissionPrice: { value: 0, description: "مبلغ کمیسیون", unit: "تومان" },
+   salesPricePlusCommission: { value: 0, description: "قیمت فروش + کمیسیون", unit: "تومان" },
+   salesPriceMinusCommission: { value: 0, description: "قیمت فروش - کمیسیون", unit: "تومان" },
+};
 
 const Logic: FC = (): JSX.Element => {
-   const [weight, setWeight] = useState<string>("60");
-   const [height, setHeight] = useState<string>("170");
-   const [result, setResult] = useState<{ value: number; color: string; description: string }>({ value: 0, color: "", description: "" });
+   const [salesPrice, setSalesPrice] = useState<string>("25000");
+   const [commissionPercentage, setCommissionPercentage] = useState<string>("35");
+   const [result, setResult] = useState<TResultInitialValue>(resultInitialValue);
 
-   const heightLabel: string = "قد (سانتی‌متر)" as const;
-   const weightLabel: string = "وزن (کیلوگرم)" as const;
+   const salesPriceLabel: string = "قیمت فروش" as const;
+   const salesPriceUnit: string = "تومان" as const;
 
-   const weightChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
-      setWeight(valueValidation(ev.target.value));
+   const commissionPercentageLabel: string = "کمیسیون" as const;
+   const commissionPercentageUnit: string = "درصد" as const;
+
+   const salesPriceChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+      setSalesPrice(valueValidation(ev.target.value));
    };
 
-   const heightChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
-      setHeight(valueValidation(ev.target.value));
+   const commissionPercentageChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+      setCommissionPercentage(valueValidation(ev.target.value));
    };
 
    useEffect(() => {
-      const resultValue: number = Number((Number(weight) / (Number(height) / 100) ** 2).toFixed(2));
-
-      switch (true) {
-         case resultValue < 18.5:
-            setResult({ value: resultValue, color: "ring-pink-500", description: "شما کمبود وزن دارید!" });
-            break;
-
-         case 18.5 <= resultValue && resultValue < 24.9:
-            setResult({ value: resultValue, color: "ring-green-500", description: "شما وزن مناسب دارید!" });
-            break;
-
-         case 25 <= resultValue && resultValue < 29.9:
-            setResult({ value: resultValue, color: "ring-fuchsia-500", description: "شما اضافه وزن دارید!" });
-            break;
-
-         case 30 <= resultValue && resultValue < 35:
-            setResult({ value: resultValue, color: "ring-amber-500", description: "شما چاق هستید!" });
-            break;
-
-         case 35 <= resultValue:
-            setResult({ value: resultValue, color: "ring-red-500", description: "شما چاقی شدید دارید!" });
-            break;
-      }
-   }, [weight, height]);
+      setResult((prev) => ({
+         commissionPrice: { ...prev.commissionPrice, value: (Number(salesPrice) * Number(commissionPercentage)) / 100 },
+         salesPricePlusCommission: { ...prev.salesPricePlusCommission, value: Number(salesPrice) + prev.commissionPrice.value },
+         salesPriceMinusCommission: { ...prev.salesPriceMinusCommission, value: Number(salesPrice) - prev.commissionPrice.value },
+      }));
+   }, [commissionPercentage, salesPrice]);
 
    return (
       <>
-         {/* Weight */}
-         <Input id="weight" label={weightLabel} onChange={weightChangeHandler} placeholder={weightLabel} value={weight} />
+         {/* Sales Price */}
+         <Input
+            id="salesPrice"
+            label={salesPriceLabel}
+            unit={salesPriceUnit}
+            onChange={salesPriceChangeHandler}
+            placeholder={salesPriceLabel}
+            value={salesPrice}
+         />
 
-         {/* Height */}
-         <Input id="height" label={heightLabel} onChange={heightChangeHandler} placeholder={heightLabel} value={height} />
+         {/* Commission Percentage */}
+         <Input
+            id="commissionPercentage"
+            label={commissionPercentageLabel}
+            unit={commissionPercentageUnit}
+            onChange={commissionPercentageChangeHandler}
+            placeholder={commissionPercentageLabel}
+            value={commissionPercentage}
+         />
 
          <Space />
 
-         {/* Output */}
-         <Output value={result.value} borderColor={result.color} description={result.description} />
+         {/* Outputs */}
+         <Output value={result.commissionPrice.value} description={result.commissionPrice.description} unit={result.commissionPrice.unit} />
+         <Output
+            value={result.salesPricePlusCommission.value}
+            description={result.salesPricePlusCommission.description}
+            unit={result.salesPricePlusCommission.unit}
+         />
+         <Output
+            value={result.salesPriceMinusCommission.value}
+            description={result.salesPriceMinusCommission.description}
+            unit={result.salesPriceMinusCommission.unit}
+         />
       </>
    );
 };
 
-export default Logic;
+export default memo(Logic);

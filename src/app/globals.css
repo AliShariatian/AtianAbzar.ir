@@ -12,7 +12,7 @@
 
 @layer components {
    .userHandle {
-      @apply flex w-full flex-row justify-between gap-2 rounded-xl bg-slate-50 px-8 py-4 shadow;
+      @apply flex w-full flex-row justify-between gap-2 rounded-xl bg-slate-50 px-7 py-4 shadow;
    }
 }
 
