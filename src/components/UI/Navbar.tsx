@@ -25,7 +25,12 @@ const Navbar: FC = (): JSX.Element => {
                      }
 
                      return (
-                        <Link onClick={() => ClickForScrollHandler(item.slug)} href={item.slug} key={index} className={`${item.className} p-2 font-extrabold`}>
+                        <Link
+                           onClick={() => ClickForScrollHandler(item.slug)}
+                           href={item.slug}
+                           key={index}
+                           className={`${item.className} whitespace-nowrap p-2 font-extrabold`}
+                        >
                            <li>{item.title}</li>
                         </Link>
                      );

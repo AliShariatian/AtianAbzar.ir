@@ -17,7 +17,7 @@ const Vitrine: FC<TProps> = ({ title, id }): JSX.Element => {
    const data = id === "tools" ? tools : categories;
 
    return (
-      <section className="mt-52 flex justify-center">
+      <section className="mt-44 flex justify-center">
          <div id={id} className="flex w-full flex-col justify-center">
             {/* Title */}
             <div className="mx-auto flex flex-col items-center">
@@ -26,7 +26,9 @@ const Vitrine: FC<TProps> = ({ title, id }): JSX.Element => {
             </div>
 
             {/* vitrine list */}
-            <div className={`${id === "tools" ? "xl:grid-cols-4" : "xl:grid-cols-5"} vitrineList`}>
+            <div
+               className={`${id === "tools" ? "grid-cols-1 xl:grid-cols-4" : "mx-auto grid-cols-2 xl:w-8/12 xl:grid-cols-3"} grid w-full gap-4 py-9 xl:py-12`}
+            >
                {data.map((item) => (
                   <VitrineButton key={item.slug} {...item} />
                ))}
