@@ -5,7 +5,7 @@ type TProps = {
    id: string;
    label: string;
    placeholder: string;
-   value: string | number;
+   value: string;
    unit?: string;
    min?: number;
    className?: string;

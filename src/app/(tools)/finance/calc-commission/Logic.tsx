@@ -1,20 +1,23 @@
 "use client";
 
-import { FC, memo, useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { valueValidation } from "@/utils/numberValidation";
 import { Input, Space, Output } from "@/components";
 import { TResultInitialValue } from "./type";
 
-const resultInitialValue: TResultInitialValue = {
-   commissionPrice: { value: 0, description: "مبلغ کمیسیون", unit: "تومان" },
-   salesPricePlusCommission: { value: 0, description: "قیمت فروش + کمیسیون", unit: "تومان" },
-   salesPriceMinusCommission: { value: 0, description: "قیمت فروش - کمیسیون", unit: "تومان" },
+const resultText: TResultInitialValue = {
+   commissionPrice: { description: "مبلغ کمیسیون", unit: "تومان" },
+   salesPricePlusCommission: { description: "قیمت فروش + کمیسیون", unit: "تومان" },
+   salesPriceMinusCommission: { description: "قیمت فروش - کمیسیون", unit: "تومان" },
 };
 
 const Logic: FC = (): JSX.Element => {
    const [salesPrice, setSalesPrice] = useState<string>("25000");
    const [commissionPercentage, setCommissionPercentage] = useState<string>("35");
-   const [result, setResult] = useState<TResultInitialValue>(resultInitialValue);
+
+   const [commissionPrice, setCommissionPrice] = useState<number>(0);
+   const [salesPricePlusCommission, setSalesPricePlusCommission] = useState<number>(0);
+   const [salesPriceMinusCommission, setSalesPriceMinusCommission] = useState<number>(0);
 
    const salesPriceLabel: string = "قیمت فروش" as const;
    const salesPriceUnit: string = "تومان" as const;
@@ -31,12 +34,10 @@ const Logic: FC = (): JSX.Element => {
    };
 
    useEffect(() => {
-      setResult((prev) => ({
-         commissionPrice: { ...prev.commissionPrice, value: (Number(salesPrice) * Number(commissionPercentage)) / 100 },
-         salesPricePlusCommission: { ...prev.salesPricePlusCommission, value: Number(salesPrice) + prev.commissionPrice.value },
-         salesPriceMinusCommission: { ...prev.salesPriceMinusCommission, value: Number(salesPrice) - prev.commissionPrice.value },
-      }));
-   }, [commissionPercentage, salesPrice]);
+      setCommissionPrice((Number(salesPrice) * Number(commissionPercentage)) / 100);
+      setSalesPricePlusCommission(Number(salesPrice) + commissionPrice);
+      setSalesPriceMinusCommission(Number(salesPrice) - commissionPrice);
+   }, [commissionPercentage, commissionPrice, salesPrice]);
 
    return (
       <>
@@ -63,19 +64,19 @@ const Logic: FC = (): JSX.Element => {
          <Space />
 
          {/* Outputs */}
-         <Output value={result.commissionPrice.value} description={result.commissionPrice.description} unit={result.commissionPrice.unit} />
+         <Output value={commissionPrice} description={resultText.commissionPrice.description} unit={resultText.commissionPrice.unit} />
          <Output
-            value={result.salesPricePlusCommission.value}
-            description={result.salesPricePlusCommission.description}
-            unit={result.salesPricePlusCommission.unit}
+            value={salesPricePlusCommission}
+            description={resultText.salesPricePlusCommission.description}
+            unit={resultText.salesPricePlusCommission.unit}
          />
          <Output
-            value={result.salesPriceMinusCommission.value}
-            description={result.salesPriceMinusCommission.description}
-            unit={result.salesPriceMinusCommission.unit}
+            value={salesPriceMinusCommission}
+            description={resultText.salesPriceMinusCommission.description}
+            unit={resultText.salesPriceMinusCommission.unit}
          />
       </>
    );
 };
 
-export default memo(Logic);
+export default Logic;

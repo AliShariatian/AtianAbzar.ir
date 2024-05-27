@@ -1,5 +1,4 @@
 type TResultInitialValueItem = {
-   value: number;
    description: string;
    unit: string;
 };
