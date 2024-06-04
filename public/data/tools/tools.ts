@@ -8,11 +8,17 @@ type TTools = {
 
 // ---------------------------------------------------------------------------------------------------------
 // Data
-let general: TTools = [{ title: "تبدیل واحد", slug: "conversion-of-units" }];
+let general: TTools = [
+   { title: "بزودی", slug: "" },
+   // { title: "تبدیل واحد", slug: "conversion-of-units" }
+];
 
-let engineering: TTools = [{ title: "محاسبه مساحت", slug: "area-calculation" }];
+let engineering: TTools = [
+   { title: "بزودی", slug: "" },
+   // { title: "محاسبه مساحت", slug: "area-calculation" }
+];
 
-let sports: TTools = [{ title: "تست اسپورت", slug: "test-sport" }];
+let sports: TTools = [{ title: "بزودی", slug: "" }];
 
 let finance: TTools = [
    { title: "محاسبه درصد تخفیف", slug: "calc-percentage-discount" },
@@ -20,10 +26,11 @@ let finance: TTools = [
 ];
 
 let health: TTools = [{ title: "محاسبه شاخص توده بدنی (BMI)", slug: "calc-bmi" }];
-let programming: TTools = [{ title: "asf", slug: "asf" }];
+
+let programming: TTools = [{ title: "بزودی", slug: "" }];
 
 // ---------------------------------------------------------------------------------------------------------
-// Add category, And add category to slug
+// Add category, and Add category to slug
 general = general.map((item) => ({ ...item, category: "general", slug: `general/${item.slug}` }));
 engineering = engineering.map((item) => ({ ...item, category: "engineering", slug: `engineering/${item.slug}` }));
 sports = sports.map((item) => ({ ...item, category: "sports", slug: `sports/${item.slug}` }));

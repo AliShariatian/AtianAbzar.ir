@@ -1,19 +1,15 @@
 // UI
-import Navbar from "./UI/Navbar";
-import Footer from "./UI/Footer";
-import MainTitle from "./UI/MainTitle";
-import TiltEffect from "./UI/TiltEffect";
-import PageLoadingProgressBar from "./UI/PageLoadingProgressBar";
+export { default as Navbar } from "./UI/Navbar";
+export { default as Footer } from "./UI/Footer";
+export { default as MainTitle } from "./UI/MainTitle";
+export { default as TiltEffect } from "./UI/TiltEffect";
+export { default as PageLoadingProgressBar } from "./UI/PageLoadingProgressBar";
 
 // Tools
-import ToolPageContainer from "./tools/ToolPageContainer";
-import VitrineButton from "./tools/Vitrine/VitrineButton";
-import Vitrine from "./tools/Vitrine";
-import Input from "./tools/Input";
-import Select from "./tools/Select";
-import Space from "./tools/Space";
-import Output from "./tools/Output";
-
-// EXPORT
-
-export { TiltEffect, Navbar, Footer, MainTitle, VitrineButton, Vitrine, Input, Select, Space, ToolPageContainer, PageLoadingProgressBar, Output };
+export { default as ToolPageContainer } from "./tools/ToolPageContainer";
+export { default as VitrineButton } from "./tools/Vitrine/VitrineButton";
+export { default as Vitrine } from "./tools/Vitrine";
+export { default as Input } from "./tools/Input";
+export { default as Select } from "./tools/Select";
+export { default as Space } from "./tools/Space";
+export { default as Output } from "./tools/Output";
