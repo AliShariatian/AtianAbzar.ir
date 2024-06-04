@@ -29,9 +29,11 @@ const Vitrine: FC<TProps> = ({ title, id }): JSX.Element => {
             <div
                className={`${id === "tools" ? "grid-cols-1 xl:grid-cols-4" : "mx-auto grid-cols-2 xl:w-8/12 xl:grid-cols-3"} grid w-full gap-4 py-9 xl:py-12`}
             >
-               {data.map((item) => (
-                  <VitrineButton key={item.slug} {...item} />
-               ))}
+               {data.map((item) => {
+                  if (item.title === "بزودی") return null;
+
+                  return <VitrineButton key={item.slug} {...item} />;
+               })}
             </div>
          </div>
       </section>

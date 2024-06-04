@@ -14,11 +14,10 @@ let general: TTools = [
 ];
 
 let engineering: TTools = [
-   { title: "بزودی", slug: "" },
-   // { title: "محاسبه مساحت", slug: "area-calculation" }
+   { title: "بزودی", slug: "#" },
 ];
 
-let sports: TTools = [{ title: "بزودی", slug: "" }];
+let sports: TTools = [{ title: "بزودی", slug: "#" }];
 
 let finance: TTools = [
    { title: "محاسبه درصد تخفیف", slug: "calc-percentage-discount" },
@@ -27,7 +26,7 @@ let finance: TTools = [
 
 let health: TTools = [{ title: "محاسبه شاخص توده بدنی (BMI)", slug: "calc-bmi" }];
 
-let programming: TTools = [{ title: "بزودی", slug: "" }];
+let programming: TTools = [{ title: "بزودی", slug: "#" }];
 
 // ---------------------------------------------------------------------------------------------------------
 // Add category, and Add category to slug
