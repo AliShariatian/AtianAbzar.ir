@@ -29,16 +29,21 @@
    transition: scale 0.2s cubic-bezier(1, 0.03, 0, 1.01);
 }
 
+input[type="search"]::-webkit-search-decoration:hover,
+input[type="search"]::-webkit-search-cancel-button:hover {
+   cursor: pointer;
+}
+
 /* Scrollbar */
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
    width: 0.5em;
 }
 
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
    background: #e2e8f0; /* stale-200 */
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
    border-radius: 9px;
    background-color: #94a3b8; /* stale-400 */
    outline-width: 0;

@@ -1,6 +1,6 @@
 import { TCategories } from "./categories";
 
-type TTools = {
+export type TTools = {
    title: string;
    slug: string;
    category?: TCategories["slug"];
