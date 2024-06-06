@@ -2,7 +2,7 @@
 
 import { FC, useEffect, useState } from "react";
 import { valueValidation } from "@/utils/numberValidation";
-import { Input, Space, Output } from "@/components";
+import { Input, Output, ResultLine } from "@/components";
 
 const Logic: FC = (): JSX.Element => {
    const [weight, setWeight] = useState<string>("60");
@@ -59,7 +59,7 @@ const Logic: FC = (): JSX.Element => {
          {/* Height */}
          <Input id="height" label={heightLabel} unit={heightUnit} onChange={heightChangeHandler} placeholder={heightLabel} value={height} />
 
-         <Space />
+         <ResultLine />
 
          {/* Output */}
          <Output value={result.value} unit={resultLabel} borderColor={result.color} description={result.description} />

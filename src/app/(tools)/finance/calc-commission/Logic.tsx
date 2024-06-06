@@ -2,7 +2,7 @@
 
 import { FC, useEffect, useState } from "react";
 import { valueValidation } from "@/utils/numberValidation";
-import { Input, Space, Output } from "@/components";
+import { Input, Output, ResultLine } from "@/components";
 import { TResultInitialValue } from "./type";
 
 const resultText: TResultInitialValue = {
@@ -61,7 +61,7 @@ const Logic: FC = (): JSX.Element => {
             value={commissionPercentage}
          />
 
-         <Space />
+         <ResultLine />
 
          {/* Outputs */}
          <Output value={commissionPrice} description={resultText.commissionPrice.description} unit={resultText.commissionPrice.unit} />

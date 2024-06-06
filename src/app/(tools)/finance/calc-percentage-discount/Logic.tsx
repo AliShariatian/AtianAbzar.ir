@@ -2,7 +2,7 @@
 
 import { FC, useEffect, useState } from "react";
 import { valueValidation } from "@/utils/numberValidation";
-import { Input, Space, Output } from "@/components";
+import { Input, ResultLine, Output } from "@/components";
 
 const resultText = {
    finalPrice: { description: "مبلغی که باید پرداخت کنید", unit: "تومان" },
@@ -57,7 +57,7 @@ const Logic: FC = (): JSX.Element => {
             value={discountPercentage}
          />
 
-         <Space />
+         <ResultLine />
 
          {/* Outputs */}
          <Output value={finalPrice} description={resultText.finalPrice.description} unit={resultText.finalPrice.unit} />

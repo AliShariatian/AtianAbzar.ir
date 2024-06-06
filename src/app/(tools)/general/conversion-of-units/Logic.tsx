@@ -4,7 +4,7 @@
 
 import { FC, useState } from "react";
 import { valueValidation } from "@/utils/numberValidation";
-import { Input, Select, Space } from "@/components";
+import { Input, Select, ResultLine } from "@/components";
 import { labels } from "./selectLabels";
 
 const Logic: FC = (): JSX.Element => {
@@ -32,7 +32,7 @@ const Logic: FC = (): JSX.Element => {
          {/* User select */}
          <Select labels={labels} />
 
-         <Space />
+         <ResultLine />
 
          {/* REM */}
          <Input id="rem" label="Rem" onChange={remChangeHandler} placeholder="Rem" value={rem} />

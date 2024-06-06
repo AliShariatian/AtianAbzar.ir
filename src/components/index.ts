@@ -11,5 +11,5 @@ export { default as VitrineButton } from "./tools/Vitrine/VitrineButton";
 export { default as Vitrine } from "./tools/Vitrine";
 export { default as Input } from "./tools/Input";
 export { default as Select } from "./tools/Select";
-export { default as Space } from "./tools/Space";
 export { default as Output } from "./tools/Output";
+export { default as ResultLine } from "./tools/ResultLine";
