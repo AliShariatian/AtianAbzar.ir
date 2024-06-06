@@ -2,6 +2,7 @@
 
 import { FC } from "react";
 import { navbarItems, TNavbarItems } from "@/public/data/persianTexts";
+import { SearchBox } from "@/components";
 
 // COMPONENT
 import Link from "next/link";
@@ -37,6 +38,8 @@ const Navbar: FC = (): JSX.Element => {
                   }
                })}
             </ul>
+
+            <SearchBox />
          </div>
       </nav>
    );

@@ -4,6 +4,7 @@ export { default as Footer } from "./UI/Footer";
 export { default as MainTitle } from "./UI/MainTitle";
 export { default as TiltEffect } from "./UI/TiltEffect";
 export { default as PageLoadingProgressBar } from "./UI/PageLoadingProgressBar";
+export { default as SearchBox } from "./UI/SearchBox";
 
 // Tools
 export { default as ToolPageContainer } from "./tools/ToolPageContainer";
