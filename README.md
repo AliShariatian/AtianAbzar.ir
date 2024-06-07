@@ -16,6 +16,6 @@
 
 **Todo List:**
 
+-  [x] : Search Box
 -  [ ] : PWA Version
--  [ ] : Search Box
 -  [ ] : Different Background Color for each Category

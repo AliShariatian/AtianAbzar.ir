@@ -1,6 +1,6 @@
 "use client";
 
-import { ChangeEvent, FC, FocusEvent, useEffect, useState } from "react";
+import { ChangeEvent, FC, useEffect, useState } from "react";
 import useDebounce from "@/hook/useDebounce";
 import Link from "next/link";
 import cn from "@/utils/cn";
@@ -10,6 +10,7 @@ import { tools, TTools } from "@/public/data/tools/tools";
 
 const OPEN_RESULT_BOX_MIN_CHARACTER_LENGTH = 2;
 
+// TODO: Add search for mobile view
 const SearchBox: FC = (): JSX.Element => {
    const [searchInputValue, setSearchInputValue] = useState<string>("");
    const [searchResult, setSearchResult] = useState<TTools | null>(null);

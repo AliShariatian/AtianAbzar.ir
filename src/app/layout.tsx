@@ -12,6 +12,8 @@ import { Navbar, Footer, PageLoadingProgressBar } from "@/components";
 // -------------------------------------------------------------------------------------
 
 export const metadata: Metadata = {
+   manifest: "/manifest.json",
+
    title: `${metaTitle} | مرجع ابزارهای محاسباتی روزمره`,
    description: "مرجع ابزارهای محاسباتی روزمره | محاسبه | محاسبه آنلاین",
 };
