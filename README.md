@@ -17,5 +17,6 @@
 **Todo List:**
 
 -  [x] : Search Box
--  [ ] : PWA Version
+-  [x] : PWA Version
+-  [ ] : Add Dark Mode
 -  [ ] : Different Background Color for each Category
