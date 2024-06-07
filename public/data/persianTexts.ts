@@ -26,3 +26,5 @@ export const HomePageTexts: {
 
 // 404 NotFound Page
 export const warning404Text: string = "اشتباه اومدی، این صفحه وجود نداره!";
+
+export const appVersionNumberInFooter: number = 1.1;
