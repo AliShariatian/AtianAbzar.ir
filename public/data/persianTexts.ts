@@ -21,7 +21,7 @@ export const HomePageTexts: {
    description: string;
 } = {
    toolBox: "آتــیــان ابــزار",
-   description: "مرجع ابزارهای محاسباتی روزمره",
+   description: "مجموعه ابزارهای محاسباتی روزمره",
 };
 
 // 404 NotFound Page

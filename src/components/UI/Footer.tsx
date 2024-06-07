@@ -12,7 +12,7 @@ const Footer: FC = (): JSX.Element => {
          <div className="flex flex-col items-center justify-between gap-y-4 *:cursor-default *:rounded-lg *:border *:border-slate-300 *:bg-slate-50 *:px-3 *:py-1 xl:w-11/12 xl:flex-row">
             <p>
                طراحی و توسعه توسط&nbsp;
-               <Link href="https://shariatian.ir" target="_blank" className="font-bold hover:underline">
+               <Link href="https://shariatian.ir" target="_blank" title="رفتن به صفحه سازنده" className="font-bold hover:underline">
                   علی شریعتیان
                </Link>
             </p>
