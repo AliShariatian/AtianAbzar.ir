@@ -10,16 +10,20 @@ type TProps = {
 
 const Output: FC<TProps> = ({ value, description, borderColor, unit }): JSX.Element => {
    return (
-      <div className={`${borderColor} ${borderColor ? "ring-4" : null} userHandle flex-row-reverse`}>
-         <div className="flex flex-row-reverse">
-            {unit && <label className="mr-4 flex w-7 items-center whitespace-nowrap text-right text-sm">{unit}</label>}
+      <div className={`${borderColor} ${borderColor ? "ring-4" : null} userHandle`}>
+         <div className="flex w-full flex-col-reverse gap-2 *:w-full xl:flex-row-reverse xl:gap-0">
+            {/* Result */}
+            <div className="flex flex-row-reverse">
+               {unit && <label className="mr-4 flex w-7 items-center whitespace-nowrap text-right text-sm">{unit}</label>}
 
-            <div dir="ltr" className="overflow-hidden truncate text-left xl:w-56">
-               {value.toLocaleString()}
+               <div dir="ltr" className="my-auto overflow-hidden truncate text-left font-medium xl:w-56">
+                  {value.toLocaleString()}
+               </div>
             </div>
-         </div>
 
-         {description && <span className="text-nowrap text-lg">{description}</span>}
+            {/* Description */}
+            {description && <span className="text-lg">{description}</span>}
+         </div>
       </div>
    );
 };

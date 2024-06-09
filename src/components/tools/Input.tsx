@@ -27,7 +27,7 @@ const Input: FC<TProps> = ({ id, label, onChange, placeholder, value, min = 0, c
             min={min}
             value={value}
             onChange={onChange}
-            className="input-arrow-hide w-3/5 bg-transparent text-left font-medium outline-none placeholder:text-lg xl:w-9/12"
+            className="input-arrow-hide w-3/5 bg-transparent text-left outline-none placeholder:text-lg xl:w-9/12"
          />
 
          {unit && (

@@ -19,11 +19,11 @@ const Breadcrumb: FC<TProps> = ({ title, category }): JSX.Element => {
 
    return (
       <Breadcrumbs separator={separator} className="!mb-9 !mt-5 font-semibold *:!font-dana">
-         <Link href="/" title={homeLabel} className="!text-dark opacity-60 transition-colors hover:underline hover:opacity-100">
+         <Link href="/" title={homeLabel} className="!text-dark opacity-60 transition-opacity hover:underline hover:opacity-100">
             {homeLabel}
          </Link>
 
-         <Link title={category?.title} href={`/${category?.slug}`} className="!text-dark opacity-60 transition-colors hover:underline hover:opacity-100">
+         <Link title={category?.title} href={`/${category?.slug}`} className="!text-dark opacity-60 transition-opacity hover:underline hover:opacity-100">
             {category?.title}
          </Link>
 
