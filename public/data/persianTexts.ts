@@ -1,5 +1,5 @@
 // Metadata
-export const metaTitle: string = "آتیان ابزار";
+export const metaTitle: string = "آتیان ابزار" as const;
 
 // Navbar
 export type TNavbarItems = {
@@ -9,11 +9,11 @@ export type TNavbarItems = {
 };
 
 export const navbarItems: TNavbarItems[] = [
-   { slug: "/", title: "آتـیـان ابـزار", className: "" },
-   { slug: "", title: "", className: "hidden xl:block" },
-   { slug: "/#categories", title: "دسته‌بندی‌ها", className: "hidden xl:block" },
-   { slug: "/#tools", title: "لیست ابزارها", className: "hidden xl:block" },
-];
+   { slug: "/", title: "آتـیـان ابـزار", className: "font-morabba xl:text-2xl text-3xl" },
+   { slug: "", title: "", className: "" },
+   { slug: "/#categories", title: "دسته‌بندی‌ها", className: "" },
+   { slug: "/#tools", title: "لیست ابزارها", className: "" },
+] as const;
 
 // Home page
 export const HomePageTexts: {
@@ -22,9 +22,9 @@ export const HomePageTexts: {
 } = {
    toolBox: "آتــیــان ابــزار",
    description: "مجموعه ابزارهای محاسباتی روزمره",
-};
+} as const;
 
 // 404 NotFound Page
-export const warning404Text: string = "اشتباه اومدی، این صفحه وجود نداره!";
+export const warning404Text: string = "اشتباه اومدی، این صفحه وجود نداره!" as const;
 
-export const appVersionNumberInFooter: number = 1.1;
+export const appVersionNumberInFooter: number = 1.1 as const;

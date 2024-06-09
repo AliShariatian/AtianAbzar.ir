@@ -1,10 +1,10 @@
 "use client";
 
 import { FC } from "react";
-import { appVersionNumberInFooter } from "@/public/data/persianTexts";
 
 // COMPONENT
 import Link from "next/link";
+import { VersionNumber } from "@/components";
 
 const Footer: FC = (): JSX.Element => {
    return (
@@ -17,7 +17,7 @@ const Footer: FC = (): JSX.Element => {
                </Link>
             </p>
 
-            <span className="max-sm:hidden">نسخه {appVersionNumberInFooter}</span>
+            <VersionNumber className="max-sm:hidden" />
          </div>
       </nav>
    );

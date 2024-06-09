@@ -1,13 +1,21 @@
 "use client";
 
-import { FC } from "react";
+import { FC, useCallback, useState } from "react";
+import hamburgerMenuIcon from "@/public/img/hamburgerMenu.svg";
 import { navbarItems, TNavbarItems } from "@/public/data/persianTexts";
-import { SearchBox } from "@/components";
 
 // COMPONENT
 import Link from "next/link";
+import Image from "next/image";
+import { MobileNavMenu, SearchBox } from "@/components";
 
 const Navbar: FC = (): JSX.Element => {
+   const [isMobileNavMenuClose, setIsMobileNavMenuClose] = useState<boolean>(true);
+
+   const toggleMobileNavMenuHandler = useCallback(() => {
+      setIsMobileNavMenuClose((prev) => !prev);
+   }, []);
+
    const ClickForScrollHandler = (id: string) => {
       const element = document.getElementById(id);
       if (element) {
@@ -17,8 +25,22 @@ const Navbar: FC = (): JSX.Element => {
 
    return (
       <nav className="fixed right-0 top-0 z-40 flex h-16 w-full justify-center bg-slate-100 shadow">
+         {/* Hamburger Menu Items for Mobile */}
+         <MobileNavMenu onClose={toggleMobileNavMenuHandler} isClose={isMobileNavMenuClose} />
+
+         {/* Navbar Menu for Desktop */}
          <div className="container flex w-full items-center justify-between">
-            <ul className="flex justify-center gap-2 max-xl:w-full xl:gap-4">
+            {/* Hamburger Menu Icon for Mobile */}
+            <Image
+               onClick={toggleMobileNavMenuHandler}
+               src={hamburgerMenuIcon}
+               alt="Mobile Menu"
+               width={20}
+               height={20}
+               className="my-auto size-5 max-sm:w-1/6 xl:hidden"
+            />
+
+            <ul className="flex items-center justify-center gap-2 max-xl:hidden xl:gap-4">
                {navbarItems.map((item: TNavbarItems, index: number) => {
                   {
                      if (index === 1) {
@@ -39,7 +61,7 @@ const Navbar: FC = (): JSX.Element => {
                })}
             </ul>
 
-            <SearchBox />
+            <SearchBox className="w-5/6 xl:w-96" />
          </div>
       </nav>
    );

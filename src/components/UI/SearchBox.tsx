@@ -10,8 +10,11 @@ import { tools, TTools } from "@/public/data/tools/tools";
 
 const OPEN_RESULT_BOX_MIN_CHARACTER_LENGTH = 2;
 
-// TODO: Add search for mobile view
-const SearchBox: FC = (): JSX.Element => {
+type TProps = {
+   className?: string;
+};
+
+const SearchBox: FC<TProps> = ({ className }): JSX.Element => {
    const [searchInputValue, setSearchInputValue] = useState<string>("");
    const [searchResult, setSearchResult] = useState<TTools | null>(null);
 
@@ -35,8 +38,8 @@ const SearchBox: FC = (): JSX.Element => {
          {isOpenResultBox && <div onClick={() => setIsOpenResultBox(false)} className="fixed left-0 top-0 z-30 h-svh w-svw bg-slate-400 opacity-40" />}
 
          {/* Search */}
-         <div className="relative z-40 w-96">
-            <div className={cn("userHandle", "h-11 items-center border-2 border-slate-200 py-0 shadow-none transition-shadow hover:shadow max-xl:hidden")}>
+         <div className={cn("relative z-40", className)}>
+            <div className={cn("userHandle", "h-11 items-center border-2 border-slate-200 py-0 shadow-none transition-shadow hover:shadow")}>
                {/* Search Input */}
                <input
                   value={searchInputValue}

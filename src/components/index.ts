@@ -1,11 +1,13 @@
 // UI
-export { default as Navbar } from "./UI/Navbar";
+export { default as Header } from "./UI/Header";
 export { default as Footer } from "./UI/Footer";
 export { default as MainTitle } from "./UI/MainTitle";
 export { default as TiltEffect } from "./UI/TiltEffect";
 export { default as PageLoadingProgressBar } from "./UI/PageLoadingProgressBar";
 export { default as SearchBox } from "./UI/SearchBox";
 export { default as Breadcrumb } from "./UI/Breadcrumb";
+export { default as VersionNumber } from "./UI/VersionNumber";
+export { default as MobileNavMenu } from "./UI/Header/MobileNavMenu";
 
 // Tools
 export { default as ToolPageContainer } from "./tools/ToolPageContainer";

@@ -8,7 +8,7 @@ import { danaFont, jetBrainsFont, morabbaFont } from "@/public/font";
 // STYLE
 import "./globals.css";
 // COMPONENT
-import { Navbar, Footer, PageLoadingProgressBar } from "@/components";
+import { Header, Footer, PageLoadingProgressBar } from "@/components";
 // -------------------------------------------------------------------------------------
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }): JSX.Element => {
          >
             <PageLoadingProgressBar />
             
-            <Navbar />
+            <Header />
             {children}
             <Footer />
          </body>
