@@ -12,11 +12,13 @@ import { MobileNavMenu, SearchBox } from "@/components";
 const Navbar: FC = (): JSX.Element => {
    const [isMobileNavMenuClose, setIsMobileNavMenuClose] = useState<boolean>(true);
 
+   // onClick
    const toggleMobileNavMenuHandler = useCallback(() => {
       setIsMobileNavMenuClose((prev) => !prev);
    }, []);
 
-   const ClickForScrollHandler = (id: string) => {
+   // onClick
+   const scrollClickHandler = (id: string) => {
       const element = document.getElementById(id);
       if (element) {
          element.scrollIntoView();
@@ -37,7 +39,7 @@ const Navbar: FC = (): JSX.Element => {
                alt="Mobile Menu"
                width={20}
                height={20}
-               className="my-auto size-5 max-sm:w-1/6 xl:hidden"
+               className="my-auto size-5 cursor-pointer max-sm:w-1/6 xl:hidden"
             />
 
             <ul className="flex items-center justify-center gap-2 max-xl:hidden xl:gap-4">
@@ -49,7 +51,7 @@ const Navbar: FC = (): JSX.Element => {
 
                      return (
                         <Link
-                           onClick={() => ClickForScrollHandler(item.slug)}
+                           onClick={() => scrollClickHandler(item.slug)}
                            href={item.slug}
                            key={index}
                            className={`${item.className} whitespace-nowrap p-2 font-extrabold`}

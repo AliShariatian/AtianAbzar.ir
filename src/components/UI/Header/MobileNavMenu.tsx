@@ -18,7 +18,7 @@ const MobileNavMenu: FC<TProps> = ({ onClose, isClose }): JSX.Element => {
       <div
          className={`${isClose ? "left-full" : "left-0"} fixed top-0 z-[999] flex h-full w-full flex-col justify-between bg-slate-100 shadow-lg transition-[left] duration-300 xl:hidden`}
       >
-         <Image onClick={onClose} src={closeIcon} alt="close" width={20} height={20} className="absolute left-9 top-9 size-5" />
+         <Image onClick={onClose} src={closeIcon} alt="Close Menu" width={20} height={20} className="absolute left-9 top-9 size-5 cursor-pointer" />
 
          <nav className="mt-9 p-14">
             <ul className="flex flex-col gap-7 text-xl font-semibold">
