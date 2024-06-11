@@ -3,7 +3,7 @@ import { TRadioButtonProps } from "./type";
 
 const RadioButton: FC<TRadioButtonProps> = ({ props }): JSX.Element => {
    return (
-      <ul className="flex w-full overflow-hidden rounded-xl text-lg shadow *:w-full">
+      <ul className="flex w-full overflow-hidden rounded-xl text-base shadow *:w-full">
          {props.map(({ id, label, name, onChange, defaultChecked }) => (
             <li key={id}>
                <input defaultChecked={defaultChecked} onChange={onChange} type="radio" id={id} name={name} value={id} className="peer hidden" />

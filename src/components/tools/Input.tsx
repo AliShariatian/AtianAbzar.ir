@@ -30,8 +30,8 @@ const Input: FC<TProps> = ({
 }): JSX.Element => {
    return (
       <div className={cn("userHandle", className)}>
-         <label htmlFor={id} className="ml-6 flex w-fit items-center whitespace-nowrap text-lg">
-            {label}
+         <label htmlFor={id} className="ml-6 flex w-fit items-center whitespace-nowrap font-semibold">
+            {label}:
          </label>
 
          <input
@@ -43,7 +43,7 @@ const Input: FC<TProps> = ({
             min={min}
             value={isRtl ? value : isComma ? Number(value).toLocaleString() : value}
             onChange={onChange}
-            className={`${isRtl ? "text-wrap text-right" : "truncate text-left"} w-full bg-transparent outline-none placeholder:text-lg`}
+            className={`${isRtl ? "text-wrap text-right" : "truncate text-left"} w-full bg-transparent outline-none`}
          />
 
          {unit && (

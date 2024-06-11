@@ -1,3 +1,5 @@
+"use client";
+
 import { CSSProperties, FC } from "react";
 import Link from "next/link";
 import cn from "@/utils/cn";
