@@ -9,10 +9,12 @@ export type TTools = {
 // ---------------------------------------------------------------------------------------------------------
 // Data
 let general: TTools = [
-   { title: "تبدیل عدد به حروف", slug: "conversion-of-number-to-letters" },
-   { title: "تبدیل حروف به عدد", slug: "conversion-of-letters-to-number" },
+   { title: "تبدیل عدد به حروف", slug: "number-to-letters-converter" },
+   { title: "تبدیل حروف به عدد", slug: "letters-to-number-converter" },
+   { title: "تبدیل کننده کد مورس", slug: "morse-code-converter" },
+
    // { title: "تشخیص کد ملی", slug: "identification-of-code-melli" }, // Have bug
-   // { title: "تبدیل واحد", slug: "conversion-of-units" }
+   // { title: "تبدیل واحد", slug: "units-converter" }
 ];
 
 let engineering: TTools = [{ title: "بزودی", slug: "#" }];
