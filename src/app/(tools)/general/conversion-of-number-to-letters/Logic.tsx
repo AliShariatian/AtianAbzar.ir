@@ -25,7 +25,7 @@ const Logic: FC = (): JSX.Element => {
          <ResultLine />
 
          {/* Outputs */}
-         <Output value={letters} description="حروف" rtl />
+         <Output value={letters} description="حروف" isRtl />
       </>
    );
 };

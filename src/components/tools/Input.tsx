@@ -9,25 +9,26 @@ type TProps = {
    unit?: string;
    min?: number;
    className?: string;
+   isRtl?: boolean;
    onChange: (ev: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-const Input: FC<TProps> = ({ id, label, onChange, placeholder, value, min = 0, className, unit }): JSX.Element => {
+const Input: FC<TProps> = ({ id, label, onChange, placeholder, value, min = 0, className, unit, isRtl = false }): JSX.Element => {
    return (
       <div className={cn("userHandle", className)}>
-         <label htmlFor={id} className="flex items-center whitespace-nowrap text-lg">
+         <label htmlFor={id} className="ml-6 flex w-fit items-center whitespace-nowrap text-lg">
             {label}
          </label>
 
          <input
-            dir="ltr"
+            dir={isRtl ? "rtl" : "ltr"}
             id={id}
             type="text"
             placeholder={placeholder}
             min={min}
-            value={Number(value).toLocaleString()}
+            value={isRtl ? value : Number(value).toLocaleString()}
             onChange={onChange}
-            className="input-arrow-hide w-3/5 bg-transparent text-left outline-none placeholder:text-lg xl:w-9/12"
+            className={`${isRtl ? "text-wrap text-right" : "truncate text-left"} w-full bg-transparent outline-none placeholder:text-lg`}
          />
 
          {unit && (
