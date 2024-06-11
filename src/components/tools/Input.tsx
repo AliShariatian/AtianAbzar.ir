@@ -22,10 +22,10 @@ const Input: FC<TProps> = ({ id, label, onChange, placeholder, value, min = 0, c
          <input
             dir="ltr"
             id={id}
-            type="number"
+            type="text"
             placeholder={placeholder}
             min={min}
-            value={value}
+            value={Number(value).toLocaleString()}
             onChange={onChange}
             className="input-arrow-hide w-3/5 bg-transparent text-left outline-none placeholder:text-lg xl:w-9/12"
          />

@@ -9,13 +9,12 @@ export type TTools = {
 // ---------------------------------------------------------------------------------------------------------
 // Data
 let general: TTools = [
-   { title: "بزودی", slug: "" },
+   { title: "تبدیل عدد به حروف", slug: "conversion-of-number-to-letters" },
+   { title: "تبدیل حروف به عدد", slug: "conversion-of-letters-to-number" },
    // { title: "تبدیل واحد", slug: "conversion-of-units" }
 ];
 
-let engineering: TTools = [
-   { title: "بزودی", slug: "#" },
-];
+let engineering: TTools = [{ title: "بزودی", slug: "#" }];
 
 let sports: TTools = [{ title: "بزودی", slug: "#" }];
 
