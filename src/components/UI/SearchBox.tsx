@@ -47,9 +47,9 @@ const SearchBox: FC<TProps> = ({ className }): JSX.Element => {
 
             {/* Result */}
             {isOpenResultBox && !!searchResult?.length ? (
-               <ul className="absolute left-0 top-12 max-h-48 min-h-12 w-full overflow-x-hidden overflow-y-scroll rounded-xl border border-slate-200 bg-slate-50 py-1 shadow *:line-clamp-1 *:w-full *:border-b-2 *:border-slate-200 *:px-7 *:py-3 *:transition-colors last:*:border-none hover:*:bg-slate-100">
+               <ul className="absolute left-0 top-12 max-h-48 min-h-12 w-full overflow-x-hidden overflow-y-scroll rounded-xl border border-slate-200 bg-slate-50 py-1 shadow *:w-full *:border-b-2 *:border-slate-200 *:px-7 *:py-3 *:transition-colors last:*:border-none hover:*:bg-slate-100 [&>li>a]:line-clamp-1">
                   {searchResult?.map(({ title, slug }, index) => (
-                     <li key={index}>
+                     <li className="" key={index}>
                         <Link
                            href={`/${slug}`}
                            onClick={() => {
@@ -65,7 +65,7 @@ const SearchBox: FC<TProps> = ({ className }): JSX.Element => {
             ) : isOpenResultBox && !isLoading ? (
                <div className="absolute left-0 top-12 flex w-full flex-col items-center justify-center gap-1 rounded-xl bg-slate-50 py-5">
                   <span className="text-lg font-bold">چیزی پیدا نشد!</span>
-                  <span className="font-light">سعی کن از توی لیست ابزارها هم بگردی...</span>
+                  <span className="text-wrap font-light">سعی کن از توی لیست ابزارها هم بگردی...</span>
 
                   <Link
                      href="/#tools"
