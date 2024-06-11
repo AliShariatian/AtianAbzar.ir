@@ -8,6 +8,7 @@ export { default as SearchBox } from "./UI/SearchBox";
 export { default as Breadcrumb } from "./UI/Breadcrumb";
 export { default as VersionNumber } from "./UI/VersionNumber";
 export { default as MobileNavMenu } from "./UI/Header/MobileNavMenu";
+export { default as FirstAppLoadingScreen } from "./UI/FirstAppLoadingScreen";
 
 // Tools
 export { default as ToolPageContainer } from "./tools/ToolPageContainer";
