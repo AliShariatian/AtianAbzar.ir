@@ -1,16 +1,22 @@
-import { FC } from "react";
+import { CSSProperties, FC } from "react";
 import Link from "next/link";
+import cn from "@/utils/cn";
 
 type TProps = {
    title: string;
    slug: string;
+   className?: string;
 };
 
-const VitrineButton: FC<TProps> = ({ title, slug }): JSX.Element => {
-   const hoverScaleValue = { "--hover-scale-value": 1.04 } as React.CSSProperties;
+const VitrineButton: FC<TProps> = ({ title, slug, className }): JSX.Element => {
+   const hoverScaleValue = { "--hover-scale-value": 1.04 } as CSSProperties;
 
    return (
-      <Link href={slug} style={hoverScaleValue} className="hover-scale rounded-lg bg-slate-200 p-6 shadow !transition-all hover:shadow-md">
+      <Link
+         href={slug}
+         style={{ ...hoverScaleValue }}
+         className={`${cn("hover-scale rounded-lg bg-slate-200 p-6 shadow !transition-all hover:shadow-md", className)}`}
+      >
          <h3 className="line-clamp-1 text-center font-bold">{title}</h3>
       </Link>
    );
