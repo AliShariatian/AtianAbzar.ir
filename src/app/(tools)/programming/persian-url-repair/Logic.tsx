@@ -18,7 +18,7 @@ const Logic: FC = (): JSX.Element => {
    return (
       <>
          {/* Number */}
-         <Input id="url" label={"URL"} isComma={false} onChange={urlFixerHandler} placeholder={"لینک شامل حروف فارسی را وارد کنید"} value={urlInputValue} />
+         <Input id="url" isFocus label={"URL"} isComma={false} onChange={urlFixerHandler} placeholder={"لینک شامل حروف فارسی را وارد کنید"} value={urlInputValue} />
 
          <ResultLine />
 

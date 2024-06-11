@@ -54,7 +54,7 @@ const Logic: FC = (): JSX.Element => {
    return (
       <>
          {/* Weight */}
-         <Input id="weight" label={weightLabel} unit={weightUnit} onChange={weightChangeHandler} placeholder={weightLabel} value={weight} />
+         <Input id="weight" isFocus label={weightLabel} unit={weightUnit} onChange={weightChangeHandler} placeholder={weightLabel} value={weight} />
 
          {/* Height */}
          <Input id="height" label={heightLabel} unit={heightUnit} onChange={heightChangeHandler} placeholder={heightLabel} value={height} />

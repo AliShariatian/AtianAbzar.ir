@@ -35,7 +35,7 @@ const Logic: FC = (): JSX.Element => {
          <ResultLine />
 
          {/* REM */}
-         <Input id="rem" label="Rem" onChange={remChangeHandler} placeholder="Rem" value={rem} />
+         <Input id="rem" isFocus label="Rem" onChange={remChangeHandler} placeholder="Rem" value={rem} />
 
          {/* PX */}
          <Input id="px" label="Px" onChange={pxChangeHandler} placeholder="Px" value={px} />

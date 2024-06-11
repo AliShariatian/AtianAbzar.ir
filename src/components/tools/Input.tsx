@@ -1,5 +1,5 @@
+import { ChangeEvent, FC } from "react";
 import cn from "@/utils/cn";
-import { FC } from "react";
 
 type TProps = {
    id: string;
@@ -11,10 +11,23 @@ type TProps = {
    className?: string;
    isRtl?: boolean;
    isComma?: boolean;
-   onChange: (ev: React.ChangeEvent<HTMLInputElement>) => void;
+   isFocus?: boolean;
+   onChange: (ev: ChangeEvent<HTMLInputElement>) => void;
 };
 
-const Input: FC<TProps> = ({ id, label, onChange, placeholder, value, min = 0, className, unit, isRtl = false, isComma = true }): JSX.Element => {
+const Input: FC<TProps> = ({
+   id,
+   label,
+   onChange,
+   placeholder,
+   value,
+   min = 0,
+   className,
+   unit,
+   isRtl = false,
+   isComma = true,
+   isFocus = false,
+}): JSX.Element => {
    return (
       <div className={cn("userHandle", className)}>
          <label htmlFor={id} className="ml-6 flex w-fit items-center whitespace-nowrap text-lg">
@@ -25,6 +38,7 @@ const Input: FC<TProps> = ({ id, label, onChange, placeholder, value, min = 0, c
             dir={isRtl ? "rtl" : "ltr"}
             id={id}
             type="text"
+            autoFocus={isFocus}
             placeholder={placeholder}
             min={min}
             value={isRtl ? value : isComma ? Number(value).toLocaleString() : value}

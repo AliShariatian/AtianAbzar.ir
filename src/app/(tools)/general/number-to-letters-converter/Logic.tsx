@@ -20,7 +20,7 @@ const Logic: FC = (): JSX.Element => {
    return (
       <>
          {/* Number */}
-         <Input id="number" label={"عدد"} onChange={numberToLetterHandler} placeholder={"عدد را وارد کنید"} value={numberInputValue} />
+         <Input id="number" isFocus label={"عدد"} onChange={numberToLetterHandler} placeholder={"عدد را وارد کنید"} value={numberInputValue} />
 
          <ResultLine />
 

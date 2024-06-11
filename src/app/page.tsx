@@ -14,7 +14,7 @@ const HomePage: FC = (): JSX.Element => {
 
          {/* Vitrines */}
          <Vitrine title="دسته‌بندی‌ها" id="categories" />
-         <Vitrine title="همه‌ی ابزارها" id="tools" />
+         <Vitrine title="لیست ابزارها" id="tools" />
       </div>
    );
 };

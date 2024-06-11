@@ -17,3 +17,4 @@ export { default as Input } from "./tools/Input";
 export { default as Select } from "./tools/Select";
 export { default as Output } from "./tools/Output";
 export { default as ResultLine } from "./tools/ResultLine";
+export { default as RadioButton } from "./tools/RadioButton";
