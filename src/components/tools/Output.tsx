@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 type TProps = {
-   value: string | number | TypeError;
+   value: string | number | boolean | undefined | TypeError;
    unit?: string;
    isRtl?: boolean;
    description?: string;
@@ -17,7 +17,7 @@ const Output: FC<TProps> = ({ value, description, borderColor, unit, isRtl = fal
                {unit && <label className="mr-4 flex w-7 items-center whitespace-nowrap text-right text-sm">{unit}</label>}
 
                <div dir={isRtl ? "rtl" : "ltr"} className={`${isRtl ? "text-wrap text-right" : "truncate text-left"} my-auto w-full overflow-hidden`}>
-                  {isRtl ? (value as string) : value.toLocaleString()}
+                  {isRtl ? (value as string) : value?.toLocaleString()}
                </div>
             </div>
 
