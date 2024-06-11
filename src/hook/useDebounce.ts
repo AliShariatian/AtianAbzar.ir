@@ -3,15 +3,21 @@ import { FC, useEffect, useState } from "react";
 type TProps = {
    value: string;
    delay?: number;
-   minValueLimit: number | false;
+   minValueLimit: number;
 };
 
-const useDebounce: FC<TProps> = ({ value, delay = 500, minValueLimit }): string => {
+const useDebounce: FC<TProps> = ({ value, delay = 500, minValueLimit = 0 }): [string, boolean] => {
    const [debouncedValue, setDebouncedValue] = useState<string>(value);
+   const [isLoading, setIsLoading] = useState<boolean>(true);
 
    useEffect(() => {
       const handler = setTimeout(() => {
-         minValueLimit === false ? setDebouncedValue(value) : value.length > minValueLimit ? setDebouncedValue(value) : null;
+         if (value.length > minValueLimit) {
+            setDebouncedValue(value);
+            setIsLoading(false);
+         } else {
+            setIsLoading(true);
+         }
       }, delay);
 
       return () => {
@@ -19,7 +25,7 @@ const useDebounce: FC<TProps> = ({ value, delay = 500, minValueLimit }): string 
       };
    }, [value, delay, minValueLimit]);
 
-   return debouncedValue;
+   return [debouncedValue, isLoading];
 };
 
 export default useDebounce;

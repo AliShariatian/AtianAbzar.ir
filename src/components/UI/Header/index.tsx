@@ -17,14 +17,6 @@ const Navbar: FC = (): JSX.Element => {
       setIsMobileNavMenuClose((prev) => !prev);
    }, []);
 
-   // onClick
-   const scrollClickHandler = (id: string) => {
-      const element = document.getElementById(id);
-      if (element) {
-         element.scrollIntoView();
-      }
-   };
-
    return (
       <nav className="fixed right-0 top-0 z-40 flex h-16 w-full justify-center bg-slate-100 shadow">
          {/* Hamburger Menu Items for Mobile */}
@@ -50,12 +42,7 @@ const Navbar: FC = (): JSX.Element => {
                      }
 
                      return (
-                        <Link
-                           onClick={() => scrollClickHandler(item.slug)}
-                           href={item.slug}
-                           key={index}
-                           className={`${item.className} whitespace-nowrap p-2 font-extrabold`}
-                        >
+                        <Link href={item.slug} key={index} className={`${item.className} whitespace-nowrap p-2 font-extrabold`}>
                            <li>{item.title}</li>
                         </Link>
                      );

@@ -17,8 +17,8 @@ const Vitrine: FC<TProps> = ({ title, id }): JSX.Element => {
    const data = id === "tools" ? tools : categories;
 
    return (
-      <section className="mt-44 flex justify-center">
-         <div id={id} className="flex w-full flex-col justify-center">
+      <section id={id} className="pt-44 flex justify-center">
+         <div className="flex w-full flex-col justify-center">
             {/* Title */}
             <div className="mx-auto flex flex-col items-center">
                <h2 className="text-2xl font-bold xl:text-3xl">{title}</h2>
