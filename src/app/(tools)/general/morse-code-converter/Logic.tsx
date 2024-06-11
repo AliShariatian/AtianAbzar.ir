@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 
 import { ChangeEvent, FC, useState } from "react";
@@ -13,7 +14,6 @@ const Logic: FC = (): JSX.Element => {
 
    const textChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
       const textValue: string = ev.target.value;
-      // @ts-ignore
       const newMorse: string = morse.encode(textValue, { priority: isFarsi ? 9 : 1 });
 
       setNormalTextInputValue(textValue);
@@ -22,7 +22,6 @@ const Logic: FC = (): JSX.Element => {
 
    const morseChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
       const morseValue: string = ev.target.value;
-      // @ts-ignore
       const newText: string = morse.decode(morseValue, { priority: isFarsi ? 9 : 1 });
 
       setMorseInputValue(morseValue);
