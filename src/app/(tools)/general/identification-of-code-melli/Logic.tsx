@@ -8,7 +8,7 @@ const Logic: FC = (): JSX.Element => {
    const [codeInputValue, setCodeInputValue] = useState<string>("");
    const [codeResult, setCodeResult] = useState<string>("هنوز عددی وارد نکردید");
 
-   const numberToLetterHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const codeMelliVerifyerHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
       const number: string = ev.target.value;
 
       setCodeInputValue(number);
@@ -22,7 +22,7 @@ const Logic: FC = (): JSX.Element => {
    return (
       <>
          {/* Number */}
-         <Input id="number" label={"کد ملی"} isComma={false} onChange={numberToLetterHandler} placeholder={"کد ملی را وارد کنید"} value={codeInputValue} />
+         <Input id="number" label={"کد ملی"} isComma={false} onChange={codeMelliVerifyerHandler} placeholder={"کد ملی را وارد کنید"} value={codeInputValue} />
 
          <ResultLine />
 

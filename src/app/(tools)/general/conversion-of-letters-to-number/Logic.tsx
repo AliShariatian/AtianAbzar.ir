@@ -8,7 +8,7 @@ const Logic: FC = (): JSX.Element => {
    const [lettersInputValue, setLettersInputValue] = useState<string>("صد و بیست");
    const [numbers, setNumbers] = useState<string | number>("120");
 
-   const numberToLetterHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const letterToNumberHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
       const number: string = ev.target.value;
 
       setLettersInputValue(number);
@@ -18,7 +18,7 @@ const Logic: FC = (): JSX.Element => {
    return (
       <>
          {/* Number */}
-         <Input id="number" isRtl label={"حروف"} onChange={numberToLetterHandler} placeholder={"حروف را وارد کنید"} value={lettersInputValue} />
+         <Input id="letter" isRtl label={"حروف"} onChange={letterToNumberHandler} placeholder={"حروف را وارد کنید"} value={lettersInputValue} />
 
          <ResultLine />
 
