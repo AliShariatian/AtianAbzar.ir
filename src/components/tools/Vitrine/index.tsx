@@ -27,7 +27,7 @@ const Vitrine: FC<TProps> = ({ title, id }): JSX.Element => {
 
             {/* vitrine list */}
             <div
-               className={`${id === "tools" ? "grid-cols-1 xl:grid-cols-4" : "mx-auto grid-cols-2 xl:w-8/12 xl:grid-cols-3"} grid w-full gap-4 py-9 xl:py-12`}
+               className={`${id === "tools" ? "grid-cols-1 xl:grid-cols-5" : "mx-auto grid-cols-2 xl:w-8/12 xl:grid-cols-3"} grid w-full gap-4 py-9 xl:py-12`}
             >
                {data.map((item) => {
                   if (item.title === "بزودی") return null;
