@@ -57,7 +57,7 @@ const MobileNavMenu: FC<TProps> = ({ onClose, isClose }): JSX.Element => {
             </div>
          </div>
 
-         <div className="mb-9 mt-16 flex flex-col items-center justify-center gap-5">
+         <div className="mb-6 mt-20 flex flex-col items-center justify-center gap-5">
             <h2 onClick={onClose} className="font-bold">
                <Link href={navbarItems[0].slug} className={navbarItems[0].className}>
                   {navbarItems[0].title}

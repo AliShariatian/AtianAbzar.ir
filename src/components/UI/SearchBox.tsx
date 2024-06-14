@@ -1,9 +1,11 @@
 "use client";
 
-import { ChangeEvent, FC, useEffect, useState } from "react";
+import { ChangeEvent, FC, useEffect, useState, useRef } from "react";
+import cn from "@/utils/cn";
 import useDebounce from "@/hook/useDebounce";
 import Link from "next/link";
-import cn from "@/utils/cn";
+import Image from "next/image";
+import searchIcon from "@/public/img/search.svg";
 
 // Data
 import { tools, TTools } from "@/public/data/tools/tools";
@@ -21,21 +23,35 @@ const SearchBox: FC<TProps> = ({ className }): JSX.Element => {
 
    const [debouncedSearchValue, isLoading] = useDebounce({ value: searchInputValue, minValueLimit: OPEN_RESULT_BOX_MIN_CHARACTER_LENGTH }) as [string, boolean];
 
+   const searchIconRef = useRef<HTMLInputElement>(null);
+
    useEffect(() => {
       setSearchResult(tools.filter(({ title }) => (debouncedSearchValue === "" ? null : title.includes(debouncedSearchValue))));
    }, [debouncedSearchValue]);
 
    return (
       <>
-         {/* Break Screen */}
+         {/* Backdrop Screen */}
          {isOpenResultBox && <div onClick={() => setIsOpenResultBox(false)} className="fixed left-0 top-0 z-30 h-svh w-svw bg-slate-400 opacity-40" />}
 
          {/* Search */}
          <div className={cn("relative z-40", className)}>
-            <div className={cn("userHandle", "h-11 items-center border-2 border-slate-200 py-0 shadow-none transition-shadow hover:shadow")}>
+            <div className={cn("userHandle", "h-11 items-center border-2 border-slate-200 px-4 py-0 shadow-none transition-shadow hover:shadow")}>
                {/* Search Input */}
+               <Image
+                  src={searchIcon}
+                  onClick={() => {
+                     searchIconRef.current?.focus();
+                     setIsOpenResultBox(true);
+                  }}
+                  alt="Search Icon"
+                  width={20}
+                  height={20}
+                  className="ml-2 size-5 cursor-pointer opacity-40"
+               />
                <input
                   value={searchInputValue}
+                  ref={searchIconRef}
                   onClick={() => setIsOpenResultBox(true)}
                   onChange={(ev: ChangeEvent<HTMLInputElement>) => setSearchInputValue(ev.target.value)}
                   type="search"
@@ -63,9 +79,9 @@ const SearchBox: FC<TProps> = ({ className }): JSX.Element => {
                   ))}
                </ul>
             ) : isOpenResultBox && !isLoading ? (
-               <div className="absolute left-0 top-12 flex w-full flex-col items-center justify-center gap-1 rounded-xl bg-slate-50 py-5">
-                  <span className="text-lg font-bold">چیزی پیدا نشد!</span>
-                  <span className="text-wrap font-light">سعی کن از توی لیست ابزارها هم بگردی...</span>
+               <div className="absolute left-0 top-12 flex w-full flex-col items-center justify-center gap-1 rounded-xl bg-slate-50 p-5">
+                  <span className="text-lg font-bold">اوه! چیزی پیدا نشد</span>
+                  <span className="text-wrap text-center font-light">سعی کن از توی لیست ابزارها هم بگردی...</span>
 
                   <Link
                      href="/#tools"
