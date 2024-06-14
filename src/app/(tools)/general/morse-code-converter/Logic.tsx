@@ -20,7 +20,7 @@ const Logic: FC = (): JSX.Element => {
       setMorseInputValue(newMorse);
    };
 
-   const morseChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const morseLanguageChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
       const morseValue: string = ev.target.value;
       const newText: string = morse.decode(morseValue, { priority: isFarsi ? 9 : 1 });
 
@@ -33,6 +33,7 @@ const Logic: FC = (): JSX.Element => {
    };
 
    const radioButtonItems: TRadioButtonProps = {
+      title: "زبان ترجمه",
       props: [
          { id: "farsi", label: "فارسی", name: "language", defaultChecked: false, onChange: radioButtonChangeHandler },
          { id: "english", label: "انگلیسی", name: "language", defaultChecked: true, onChange: radioButtonChangeHandler },
@@ -63,7 +64,7 @@ const Logic: FC = (): JSX.Element => {
             isRtl={isFarsi}
             isComma={false}
             label="کد مورس"
-            onChange={morseChangeHandler}
+            onChange={morseLanguageChangeHandler}
             placeholder="یا کد مورس را وارد کنید"
             value={morseInputValue}
          />

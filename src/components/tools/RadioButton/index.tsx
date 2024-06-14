@@ -1,21 +1,26 @@
 import { FC } from "react";
+import cn from "@/utils/cn";
 import { TRadioButtonProps } from "./type";
 
-const RadioButton: FC<TRadioButtonProps> = ({ props }): JSX.Element => {
+const RadioButton: FC<TRadioButtonProps> = ({ props, title }): JSX.Element => {
    return (
-      <ul className="flex w-full overflow-hidden rounded-xl text-base shadow *:w-full">
-         {props.map(({ id, label, name, onChange, defaultChecked }) => (
-            <li key={id}>
-               <input defaultChecked={defaultChecked} onChange={onChange} type="radio" id={id} name={name} value={id} className="peer hidden" />
-               <label
-                  htmlFor={id}
-                  className="flex w-full cursor-pointer items-center justify-center bg-slate-50 py-4 hover:bg-slate-100 peer-checked:bg-slate-300"
-               >
-                  {label}
-               </label>
-            </li>
-         ))}
-      </ul>
+      <div className={cn("userHandle overflow-hidden", "py-0 pl-0")}>
+         <p className="ml-2 whitespace-nowrap font-semibold">{title}:</p>
+
+         <ul className="flex w-full *:w-full">
+            {props.map(({ id, label, name, onChange, defaultChecked }) => (
+               <li key={id}>
+                  <input defaultChecked={defaultChecked} onChange={onChange} type="radio" id={id} name={name} value={id} className="peer hidden" />
+                  <label
+                     htmlFor={id}
+                     className="flex w-full cursor-pointer items-center justify-center border-b-4 border-transparent py-3 hover:bg-slate-100 peer-checked:border-slate-400 peer-checked:bg-slate-200"
+                  >
+                     {label}
+                  </label>
+               </li>
+            ))}
+         </ul>
+      </div>
    );
 };
 
