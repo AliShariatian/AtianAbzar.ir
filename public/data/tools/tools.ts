@@ -28,7 +28,7 @@ let finance: TTools = [
 
 let health: TTools = [{ title: "محاسبه شاخص توده بدنی (BMI)", slug: "calc-bmi" }];
 
-let programming: TTools = [{ title: "ترمیم URL فارسی", slug: "persian-url-repair" }];
+let programming: TTools = [{ title: "ترمیم لینک (URL) فارسی", slug: "persian-url-repair" }];
 
 // ---------------------------------------------------------------------------------------------------------
 // Add category, and Add category to slug

@@ -46,6 +46,7 @@ const Logic: FC = (): JSX.Element => {
          {/* Text */}
          <Input
             id="text"
+            inputMode="text"
             isFocus
             isRtl={isFarsi}
             isComma={false}
@@ -58,6 +59,7 @@ const Logic: FC = (): JSX.Element => {
          {/* Morse */}
          <Input
             id="morse"
+            inputMode="text"
             isRtl={isFarsi}
             isComma={false}
             label="کد مورس"

@@ -9,6 +9,7 @@ type TProps = {
    unit?: string;
    min?: number;
    className?: string;
+   inputMode?: "search" | "text" | "email" | "tel" | "url" | "decimal" | "none" | "numeric";
    isRtl?: boolean;
    isComma?: boolean;
    isFocus?: boolean;
@@ -27,6 +28,7 @@ const Input: FC<TProps> = ({
    isRtl = false,
    isComma = true,
    isFocus = false,
+   inputMode = "decimal",
 }): JSX.Element => {
    return (
       <div className={cn("userHandle", className)}>
@@ -38,6 +40,7 @@ const Input: FC<TProps> = ({
             dir={isRtl ? "rtl" : "ltr"}
             id={id}
             type="text"
+            inputMode={inputMode}
             autoFocus={isFocus}
             placeholder={placeholder}
             min={min}

@@ -18,7 +18,16 @@ const Logic: FC = (): JSX.Element => {
    return (
       <>
          {/* Number */}
-         <Input id="letter" isFocus isRtl label={"حروف"} onChange={letterToNumberHandler} placeholder={"حروف را وارد کنید"} value={lettersInputValue} />
+         <Input
+            id="letter"
+            inputMode="text"
+            isFocus
+            isRtl
+            label={"حروف"}
+            onChange={letterToNumberHandler}
+            placeholder={"حروف را وارد کنید"}
+            value={lettersInputValue}
+         />
 
          <ResultLine />
 

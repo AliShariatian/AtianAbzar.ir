@@ -39,6 +39,7 @@ const Logic: FC = (): JSX.Element => {
       <>
          {/* Main Price */}
          <Input
+            isFocus
             id="mainPrice"
             label={salesPriceLabel}
             unit={salesPriceUnit}
