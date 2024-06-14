@@ -17,7 +17,7 @@ let general: TTools = [
    // { title: "تبدیل واحد", slug: "units-converter" }
 ];
 
-let engineering: TTools = [{ title: "بزودی", slug: "#" }];
+let engineering: TTools = [{ title: "تبدیل کسر به درصد", slug: "fraction-to-percentage-converter" }];
 
 let sports: TTools = [{ title: "بزودی", slug: "#" }];
 
