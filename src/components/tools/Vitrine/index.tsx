@@ -17,7 +17,7 @@ const Vitrine: FC<TProps> = ({ title, id }): JSX.Element => {
    const data = id === "tools" ? tools : categories;
 
    return (
-      <section id={id} className="pt-44 flex justify-center">
+      <section id={id} className="flex justify-center pt-44">
          <div className="flex w-full flex-col justify-center">
             {/* Title */}
             <div className="mx-auto flex flex-col items-center">
@@ -32,7 +32,10 @@ const Vitrine: FC<TProps> = ({ title, id }): JSX.Element => {
                {data.map((item) => {
                   if (item.title === "بزودی") return null;
 
-                  return <VitrineButton key={item.slug} {...item} />;
+                  // Get category button icon
+                  const icon = categories.find(({ title }) => title === item.title);
+
+                  return <VitrineButton key={item.slug} {...item} icon={icon?.imageSrc} />;
                })}
             </div>
          </div>
