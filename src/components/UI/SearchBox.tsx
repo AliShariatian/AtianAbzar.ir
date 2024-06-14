@@ -35,7 +35,7 @@ const SearchBox: FC<TProps> = ({ className }): JSX.Element => {
          {isOpenResultBox && <div onClick={() => setIsOpenResultBox(false)} className="fixed left-0 top-0 z-30 h-svh w-svw bg-slate-400 opacity-40" />}
 
          {/* Search */}
-         <div className={cn("relative z-40", className)}>
+         <label htmlFor="searchInput" className={cn("relative z-40", className)}>
             <div className={cn("userHandle", "h-11 items-center border-2 border-slate-200 px-4 py-0 shadow-none transition-shadow hover:shadow")}>
                {/* Search Input */}
                <Image
@@ -50,6 +50,7 @@ const SearchBox: FC<TProps> = ({ className }): JSX.Element => {
                   className="ml-2 size-5 cursor-pointer opacity-40"
                />
                <input
+                  id="searchInput"
                   value={searchInputValue}
                   ref={searchIconRef}
                   onClick={() => setIsOpenResultBox(true)}
@@ -92,7 +93,7 @@ const SearchBox: FC<TProps> = ({ className }): JSX.Element => {
                   </Link>
                </div>
             ) : null}
-         </div>
+         </label>
       </>
    );
 };

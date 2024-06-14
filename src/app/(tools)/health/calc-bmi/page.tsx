@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 };
 
 const CalcBMI: FC = (): JSX.Element => {
-   const rightSide = <Logic />;
-   const leftSide = "";
+   const topSide = <Logic />;
+   const bottomSide = "";
 
-   return <ToolPageContainer leftSide={leftSide} rightSide={rightSide} />;
+   return <ToolPageContainer bottomSide={bottomSide} topSide={topSide} />;
 };
 
 export default CalcBMI;

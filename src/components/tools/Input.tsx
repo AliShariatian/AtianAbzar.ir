@@ -1,3 +1,5 @@
+"use client";
+
 import { ChangeEvent, FC } from "react";
 import cn from "@/utils/cn";
 
@@ -31,10 +33,8 @@ const Input: FC<TProps> = ({
    inputMode = "decimal",
 }): JSX.Element => {
    return (
-      <div className={cn("userHandle", className)}>
-         <label htmlFor={id} className="ml-6 flex w-fit items-center whitespace-nowrap font-semibold">
-            {label}:
-         </label>
+      <label htmlFor={id} className={cn("userHandle border-2 border-transparent has-[:focus]:border-slate-400", className)}>
+         <div className="ml-6 flex w-fit items-center whitespace-nowrap font-semibold">{label}:</div>
 
          <input
             dir={isRtl ? "rtl" : "ltr"}
@@ -49,12 +49,8 @@ const Input: FC<TProps> = ({
             className={`${isRtl ? "text-wrap text-right" : "truncate text-left"} w-full bg-transparent outline-none`}
          />
 
-         {unit && (
-            <label htmlFor={id} className="flex items-center whitespace-nowrap text-left text-sm">
-               {unit}
-            </label>
-         )}
-      </div>
+         {unit && <div className="flex items-center whitespace-nowrap text-left text-sm">{unit}</div>}
+      </label>
    );
 };
 

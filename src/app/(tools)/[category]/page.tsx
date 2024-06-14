@@ -18,7 +18,7 @@ const Category: FC = (): JSX.Element => {
          <MainTitle title={currentCategoryTitle?.title} description="" />
 
          {/* Tools list */}
-         <div className="mt-32 grid grid-cols-1 gap-4 py-9 xl:w-11/12 xl:grid-cols-4 xl:py-12">
+         <div className="my-32 grid grid-cols-1 gap-4 py-9 xl:w-11/12 xl:grid-cols-5 xl:py-12">
             {currentCategoryTools.map((item) => (
                <VitrineButton key={item?.slug} {...item} />
             ))}
