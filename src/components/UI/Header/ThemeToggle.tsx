@@ -12,7 +12,7 @@ const DarkModeToggle = () => {
 
    // toggle click
    const themeToggleClickHandler = () => {
-      theme == "dark" ? setTheme("light") : setTheme("dark");
+      theme === "dark" ? setTheme("light") : setTheme("dark");
    };
 
    // icons image

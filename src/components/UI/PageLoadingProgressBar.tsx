@@ -1,13 +1,8 @@
-"use client";
-
 import { FC } from "react";
 import NextTopLoader from "nextjs-toploader";
-import { useTheme } from "next-themes";
 
 const PageLoadingProgressBar: FC = (): JSX.Element => {
-   const { theme } = useTheme();
-
-   return <NextTopLoader color={theme == "dark" ? "#4372df" : "#0f172a"} shadow={false} height={3} showSpinner={false} />;
+   return <NextTopLoader color="#3667d8" shadow={false} height={4} showSpinner={false} />;
 };
 
 export default PageLoadingProgressBar;

@@ -14,7 +14,7 @@ const NotFound404Page: FC = (): JSX.Element => {
             <p className="text-lg">{warning404Text}</p>
             <Link
                href="/"
-               className="rounded-xl bg-green-500 px-9 py-2 text-slate-100 outline -outline-offset-4 outline-green-500 transition-[outline-offset] hover:outline-offset-4"
+               className="rounded-xl bg-green-500 px-9 py-2 text-slate-100 outline -outline-offset-4 outline-green-500 transition-[outline-offset] hover:outline-offset-4 dark:bg-green-600 dark:outline-green-600"
             >
                بازگشت
             </Link>
