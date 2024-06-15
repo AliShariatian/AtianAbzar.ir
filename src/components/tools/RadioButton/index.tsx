@@ -13,7 +13,7 @@ const RadioButton: FC<TRadioButtonProps> = ({ props, title }): JSX.Element => {
                   <input defaultChecked={defaultChecked} onChange={onChange} type="radio" id={id} name={name} value={id} className="peer hidden" />
                   <label
                      htmlFor={id}
-                     className="flex w-full cursor-pointer items-center justify-center border-b-4 border-transparent py-3 hover:bg-slate-100 peer-checked:border-slate-400 peer-checked:bg-slate-200"
+                     className="flex w-full cursor-pointer items-center justify-center border-b-4 border-transparent py-3 hover:bg-slate-100 peer-checked:border-slate-400 peer-checked:bg-slate-200 dark:hover:bg-slate-700 peer-checked:dark:border-slate-400 peer-checked:dark:bg-slate-600"
                   >
                      {label}
                   </label>

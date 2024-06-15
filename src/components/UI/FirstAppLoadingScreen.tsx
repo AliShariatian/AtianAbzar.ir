@@ -12,10 +12,10 @@ const FirstAppLoadingScreen: FC = (): JSX.Element | false => {
 
    return (
       isLoadingApp && (
-         <div className="fixed left-0 top-0 z-50 flex size-full select-none flex-col items-center justify-center bg-slate-200">
+         <div className="fixed left-0 top-0 z-50 flex size-full select-none flex-col items-center justify-center bg-slate-200 dark:bg-slate-900">
             <div className="mb-28 flex animate-pulse flex-col items-center justify-center gap-6">
-               <p className="font-morabba text-5xl font-bold text-slate-800 xl:text-7xl">{HomePageTexts.toolBox}</p>
-               <p className="text-base text-slate-600 xl:text-xl">{HomePageTexts.description}</p>
+               <p className="font-morabba text-5xl font-bold text-slate-800 dark:text-slate-100 xl:text-7xl">{HomePageTexts.toolBox}</p>
+               <p className="text-base text-slate-600 dark:text-slate-200/70 xl:text-xl">{HomePageTexts.description}</p>
             </div>
          </div>
       )

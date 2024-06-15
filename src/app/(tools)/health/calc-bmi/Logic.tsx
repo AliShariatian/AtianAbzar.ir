@@ -30,23 +30,23 @@ const Logic: FC = (): JSX.Element => {
 
       switch (true) {
          case resultValue < 18.5:
-            setResult({ value: resultValue, color: "ring-pink-500", description: "کمبود وزن دارید!" });
+            setResult({ value: resultValue, color: "ring-pink-500", description: "کمبود وزن دارید" });
             break;
 
          case 18.5 <= resultValue && resultValue < 24.9:
-            setResult({ value: resultValue, color: "ring-green-500", description: "وزن مناسب دارید!" });
+            setResult({ value: resultValue, color: "ring-green-500", description: "وزن مناسب دارید" });
             break;
 
          case 25 <= resultValue && resultValue < 29.9:
-            setResult({ value: resultValue, color: "ring-fuchsia-500", description: "اضافه وزن دارید!" });
+            setResult({ value: resultValue, color: "ring-fuchsia-500", description: "اضافه وزن دارید" });
             break;
 
          case 30 <= resultValue && resultValue < 35:
-            setResult({ value: resultValue, color: "ring-amber-500", description: "چاق هستید!" });
+            setResult({ value: resultValue, color: "ring-amber-500", description: "چاق هستید" });
             break;
 
          case 35 <= resultValue:
-            setResult({ value: resultValue, color: "ring-red-500", description: "چاقی شدید دارید!" });
+            setResult({ value: resultValue, color: "ring-red-500", description: "چاقی شدید دارید" });
             break;
       }
    }, [weight, height]);

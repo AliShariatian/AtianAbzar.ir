@@ -19,5 +19,5 @@
 -  [x] : Search Box
 -  [x] : PWA Version
 -  [x] : Add hamburger menu for mobile
--  [ ] : Add Dark Mode
+-  [x] : Add Dark Mode
 -  [ ] : Different Background Color for each Category

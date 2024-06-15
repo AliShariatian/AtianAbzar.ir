@@ -21,10 +21,11 @@ const VitrineButton: FC<TProps> = ({ title, slug, className, icon, onClick }): J
          href={slug}
          onClick={onClick}
          style={{ ...hoverScaleValue }}
-         className={`${cn("hover-scale flex items-center justify-center gap-2 rounded-lg bg-slate-200 p-6 shadow !transition-all hover:shadow-md", className)}`}
+         title={title}
+         className={`${cn("hover-scale flex items-center justify-center gap-2 rounded-lg bg-slate-200 p-6 shadow !transition-all hover:shadow-md dark:bg-slate-800 dark:hover:shadow-2xl", className)}`}
       >
          <h3 className="line-clamp-1 text-center font-bold">{title}</h3>
-         {icon && <Image src={icon} width={20} height={20} alt={title} className="size-5" />}
+         {icon && <Image src={icon} width={20} height={20} alt={title} className="size-5 dark:invert" />}
       </Link>
    );
 };

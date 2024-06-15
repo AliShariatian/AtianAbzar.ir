@@ -26,16 +26,29 @@ const MobileNavMenu: FC<TProps> = ({ onClose, isClose }): JSX.Element => {
 
    return (
       <div
-         className={`${isClose ? "left-full" : "left-0"} fixed top-0 z-[999] flex size-full flex-col justify-between overflow-y-scroll bg-slate-100 shadow-lg transition-[left] duration-300 xl:hidden`}
+         className={`${isClose ? "left-full" : "left-0"} fixed top-0 z-[999] flex size-full flex-col justify-between overflow-y-scroll bg-slate-100 shadow-lg transition-[left] duration-300 dark:bg-slate-900 xl:hidden`}
       >
-         <Image onClick={onClose} src={closeIcon} alt="Close Menu" width={20} height={20} className="absolute left-9 top-9 size-5 cursor-pointer" />
+         <Image
+            onClick={onClose}
+            src={closeIcon}
+            alt="Close Menu"
+            width={20}
+            height={20}
+            className="absolute left-9 top-9 size-5 cursor-pointer dark:opacity-90 dark:invert"
+         />
          <div className="mt-9 px-16 pt-14">
             <nav>
                <ul className="flex flex-col gap-7 text-xl font-semibold">
                   {navbarItems.map(({ slug, title, className }) => {
                      return slug === "/" || slug === "" ? null : (
                         <li key={title} onClick={onClose} className="flex items-center">
-                           <Image src={downArrowLineIcon} height={9} width={9} alt="arrow" className="-mr-5 ml-2 size-[0.7rem] rotate-90" />
+                           <Image
+                              src={downArrowLineIcon}
+                              height={9}
+                              width={9}
+                              alt="arrow"
+                              className="-mr-5 ml-2 size-[0.7rem] rotate-90 dark:opacity-90 dark:invert"
+                           />
                            <Link href={slug} className={className}>
                               {title}
                            </Link>

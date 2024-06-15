@@ -12,14 +12,27 @@
 
 @layer components {
    .userHandle {
-      @apply flex w-full flex-row items-center justify-between gap-2 rounded-xl bg-slate-50 px-7 py-4 text-base shadow xl:text-lg;
+      @apply flex w-full flex-row items-center justify-between gap-2 rounded-xl bg-slate-50 px-7 py-4 text-base shadow dark:bg-slate-800 xl:text-lg;
    }
 }
 
 :root {
    scroll-behavior: smooth;
-   color-scheme: light;
-   --slate100: #f1f5f9;
+}
+
+/* Light / Dark mode pallet */
+:root.light {
+   --slate-dark-light-mode: #f1f5f9;
+   --scrollbar-bg-dark-light-mode: #e2e8f0;
+   --scrollbar-bg-color-dark-light-mode: #94a3b8;
+   --bgDotPattern-radial-gradient-color: rgba(79, 79, 79, 0.2);
+}
+
+:root.dark {
+   --slate-dark-light-mode: #0f172a;
+   --scrollbar-bg-dark-light-mode: #76797c;
+   --scrollbar-bg-color-dark-light-mode: #404b5b;
+   --bgDotPattern-radial-gradient-color: rgba(179, 179, 179, 0.2);
 }
 
 /* Icon hover effect */
@@ -40,18 +53,18 @@ input[type="search"]::-webkit-search-cancel-button:hover {
 }
 
 ::-webkit-scrollbar-track {
-   background: #e2e8f0; /* stale-200 */
+   background: var(--scrollbar-bg-dark-light-mode); /* stale-200 */
 }
 
 ::-webkit-scrollbar-thumb {
    border-radius: 9px;
-   background-color: #94a3b8; /* stale-400 */
+   background-color: var(--scrollbar-bg-color-dark-light-mode); /* stale-400 */
    outline-width: 0;
 }
 
 /* Background dot pattern */
 .bgDotPattern {
-   background-image: radial-gradient(rgba(79, 79, 79, 0.2) 1px, transparent 1px);
+   background-image: radial-gradient(var(--bgDotPattern-radial-gradient-color) 1px, transparent 1px);
    background-size: 20px 20px;
    position: relative;
 }
@@ -65,7 +78,7 @@ input[type="search"]::-webkit-search-cancel-button:hover {
    width: 80%;
    height: 100%;
    border-radius: 30%;
-   background: var(--slate100);
+   background: var(--slate-dark-light-mode);
    filter: blur(90px);
    z-index: -100;
 }

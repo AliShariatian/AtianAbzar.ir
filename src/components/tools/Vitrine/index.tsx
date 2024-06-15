@@ -22,7 +22,7 @@ const Vitrine: FC<TProps> = ({ title, id }): JSX.Element => {
             {/* Title */}
             <div className="mx-auto flex flex-col items-center">
                <h2 className="text-2xl font-bold xl:text-3xl">{title}</h2>
-               <Image src={arrowDownIcon} width={30} height={30} alt="arrow down" className="mt-5 animate-bounce opacity-80" />
+               <Image src={arrowDownIcon} width={30} height={30} alt="arrow down" className="mt-5 animate-bounce opacity-80 dark:invert" />
             </div>
 
             {/* vitrine list */}
