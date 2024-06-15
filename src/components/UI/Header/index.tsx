@@ -3,7 +3,7 @@
 import { FC, useCallback, useState } from "react";
 import hamburgerMenuIcon from "@/public/img/hamburgerMenu.svg";
 import { navbarItems, TNavbarItems } from "@/public/data/persianTexts";
-import ThemeToggle from "@/hook/ThemeToggle";
+import ThemeToggle from "./ThemeToggle";
 
 // COMPONENT
 import Link from "next/link";

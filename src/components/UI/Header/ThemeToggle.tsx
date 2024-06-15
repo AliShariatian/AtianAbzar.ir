@@ -16,13 +16,15 @@ const DarkModeToggle = () => {
    };
 
    // icons image
-   const iconImage = ({ src, alt }: { src: string; alt: string }): JSX.Element => {
-      return <Image src={src} alt={alt} width={25} height={25} className="size-6 dark:opacity-90 dark:invert" />;
+   const iconImage = ({ src, alt, title }: { src: string; alt: string; title: string }): JSX.Element => {
+      return <Image src={src} alt={alt} width={25} height={25} title={title} className="size-6 dark:opacity-90 dark:invert" />;
    };
 
    return (
       <button onClick={themeToggleClickHandler}>
-         {theme === "light" ? iconImage({ src: moonIcon, alt: "Dark Mode" }) : iconImage({ src: sunIcon, alt: "Light Mode" })}
+         {theme === "light"
+            ? iconImage({ src: moonIcon, alt: "Dark Mode", title: "حالت تاریک" })
+            : iconImage({ src: sunIcon, alt: "Light Mode", title: "حالت روشن" })}
       </button>
    );
 };
