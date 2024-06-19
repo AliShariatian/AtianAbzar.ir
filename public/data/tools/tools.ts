@@ -11,7 +11,7 @@ export type TTools = {
 let general: TTools = [
    { title: "تبدیل عدد به حروف", slug: "number-to-letters-converter" },
    { title: "تبدیل حروف به عدد", slug: "letters-to-number-converter" },
-   { title: "تبدیل کننده کد مورس", slug: "morse-code-converter" },
+   { title: "مترجم کد مورس", slug: "morse-code-translator" },
 
    // { title: "تشخیص کد ملی", slug: "identification-of-code-melli" }, // Have bug
    // { title: "تبدیل واحد", slug: "units-converter" }

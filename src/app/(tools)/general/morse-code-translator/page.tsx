@@ -6,8 +6,8 @@ import { ToolPageContainer } from "@/components";
 import Logic from "./Logic";
 
 export const metadata: Metadata = {
-   title: `${metaTitle} | تبدیل کننده کد مورس`,
-   description: "تبدیل کد مورس | محاسبه کد مورس | کد مورس | کد مورس همستر | morse code",
+   title: `${metaTitle} | مترجم کد مورس`,
+   description: "تبدیل کد مورس | محاسبه کد مورس | کد مورس | کد مورس همستر | مترجم کد مورس | تبدیل کننده کد مورس | مورس | morse code | morse code translator",
 };
 
 const PxRem: FC = (): JSX.Element => {

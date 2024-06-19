@@ -9,13 +9,13 @@ import Image from "next/image";
 
 const Footer: FC = (): JSX.Element => {
    return (
-      <nav className="z-40 flex w-full justify-center pb-7 pt-48">
+      <nav className="z-40 mt-48 flex w-full justify-center pb-7">
          <div className="flex items-center justify-between *:rounded-lg *:border *:border-slate-300 *:bg-slate-50 *:px-4 *:py-2 dark:*:border-slate-700 dark:*:bg-slate-900 sm:w-11/12">
             {/* Social icons */}
             <div className="flex items-center gap-3 *:size-6">
                {social.map(({ href, imageSrc, title }) => (
                   <a href={href} key={href} target="_blank" title={title}>
-                     <Image src={imageSrc} alt={title} width={25} height={25} className="dark:opacity-90 dark:invert" />
+                     <Image src={imageSrc} alt={title} width={25} height={25} className="transition-transform hover:scale-125 dark:opacity-90 dark:invert" />
                   </a>
                ))}
             </div>
