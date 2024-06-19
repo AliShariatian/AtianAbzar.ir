@@ -3,6 +3,7 @@
 import { FC, useEffect, useState } from "react";
 import { valueValidation } from "@/utils/numberValidation";
 import { Input, ResultLine, Output } from "@/components";
+import { TInput } from "@/components/tools/Input";
 
 const Logic: FC = (): JSX.Element => {
    const [percentage, setPercentage] = useState<string>("10");
@@ -14,11 +15,11 @@ const Logic: FC = (): JSX.Element => {
    const fromValueLabel: string = "از مقدار" as const;
    const resultLabel: string = "می‌شود" as const;
 
-   const percentageChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const percentageChangeHandler = (ev: TInput) => {
       setPercentage(valueValidation(ev.target.value));
    };
 
-   const fromValueChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const fromValueChangeHandler = (ev: TInput) => {
       setFromValue(valueValidation(ev.target.value));
    };
 

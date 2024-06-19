@@ -3,6 +3,7 @@
 import { FC, useEffect, useState } from "react";
 import { valueValidation } from "@/utils/numberValidation";
 import { Input, ResultLine, Output } from "@/components";
+import { TInput } from "@/components/tools/Input";
 
 const Logic: FC = (): JSX.Element => {
    const [numerator, setNumerator] = useState<string>("750");
@@ -14,11 +15,11 @@ const Logic: FC = (): JSX.Element => {
    const denominatorLabel: string = "مخرج کسر" as const;
    const percentageResultLabel: string = "مقدار درصد" as const;
 
-   const numeratorChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const numeratorChangeHandler = (ev: TInput) => {
       setNumerator(valueValidation(ev.target.value));
    };
 
-   const denominatorChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const denominatorChangeHandler = (ev: TInput) => {
       setDenominator(valueValidation(ev.target.value));
    };
 

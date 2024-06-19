@@ -4,6 +4,7 @@ import { FC, useEffect, useState } from "react";
 import { valueValidation } from "@/utils/numberValidation";
 import { Input, Output, ResultLine } from "@/components";
 import { TResultInitialValue } from "./type";
+import { TInput } from "@/components/tools/Input";
 
 const resultText: TResultInitialValue = {
    commissionPrice: { description: "مبلغ کمیسیون", unit: "تومان" },
@@ -25,11 +26,11 @@ const Logic: FC = (): JSX.Element => {
    const commissionPercentageLabel: string = "کمیسیون" as const;
    const commissionPercentageUnit: string = "درصد" as const;
 
-   const salesPriceChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const salesPriceChangeHandler = (ev: TInput) => {
       setSalesPrice(valueValidation(ev.target.value));
    };
 
-   const commissionPercentageChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const commissionPercentageChangeHandler = (ev: TInput) => {
       setCommissionPercentage(valueValidation(ev.target.value));
    };
 

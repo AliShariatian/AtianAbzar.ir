@@ -4,13 +4,14 @@ import { FC, useState } from "react";
 import { valueValidation } from "@/utils/numberValidation";
 import { Input, ResultLine, Output } from "@/components";
 import { numberToWords } from "@persian-tools/persian-tools";
+import { TInput } from "@/components/tools/Input";
 
 const Logic: FC = (): JSX.Element => {
    const [numberInputValue, setNumberInputValue] = useState<string>("0");
 
    const [letters, setLetters] = useState<string | TypeError>("صفر");
 
-   const numberToLetterHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const numberToLetterHandler = (ev: TInput) => {
       const number: string = valueValidation(ev.target.value);
 
       setNumberInputValue(number);

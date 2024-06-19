@@ -9,29 +9,30 @@ export type TTools = {
 // ---------------------------------------------------------------------------------------------------------
 // Data
 let general: TTools = [
-   { title: "تبدیل عدد به حروف", slug: "number-to-letters-converter" },
-   { title: "تبدیل حروف به عدد", slug: "letters-to-number-converter" },
-   { title: "مترجم کد مورس", slug: "morse-code-translator" },
+   { title: "تبدیل آنلاین عدد به حروف", slug: "number-to-letters-converter" },
+   { title: "تبدیل آنلاین حروف به عدد", slug: "letters-to-number-converter" },
+   { title: "مترجم آنلاین کد مورس", slug: "morse-code-translator" },
+   { title: "تبدیل آنلاین اعداد فارسی و انگلیسی", slug: "number-translator" },
 
    // { title: "تشخیص کد ملی", slug: "identification-of-code-melli" }, // Have bug
    // { title: "تبدیل واحد", slug: "units-converter" }
 ];
 
 let engineering: TTools = [
-   { title: "تبدیل کسر به درصد", slug: "fraction-to-percentage-converter" },
-   { title: "محاسبه درصد", slug: "calc-percentage" },
+   { title: "تبدیل آنلاین کسر به درصد", slug: "fraction-to-percentage-converter" },
+   { title: "محاسبه آنلاین درصد", slug: "calc-percentage" },
 ];
 
 let sports: TTools = [{ title: "بزودی", slug: "#" }];
 
 let finance: TTools = [
-   { title: "محاسبه درصد تخفیف", slug: "calc-percentage-discount" },
-   { title: "محاسبه کمیسیون", slug: "calc-commission" },
+   { title: "محاسبه آنلاین درصد تخفیف", slug: "calc-percentage-discount" },
+   { title: "محاسبه آنلاین کمیسیون", slug: "calc-commission" },
 ];
 
-let health: TTools = [{ title: "محاسبه شاخص توده بدنی (BMI)", slug: "calc-bmi" }];
+let health: TTools = [{ title: "محاسبه آنلاین شاخص توده بدنی (BMI)", slug: "calc-bmi" }];
 
-let programming: TTools = [{ title: "ترمیم لینک (URL) فارسی", slug: "persian-url-repair" }];
+let programming: TTools = [{ title: "ترمیم آنلاین لینک (URL) فارسی", slug: "persian-url-repair" }];
 
 // ---------------------------------------------------------------------------------------------------------
 // Add category, and Add category to slug

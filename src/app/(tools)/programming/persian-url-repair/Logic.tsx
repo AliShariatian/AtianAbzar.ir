@@ -3,12 +3,13 @@
 import { FC, useState } from "react";
 import { Input, ResultLine, Output } from "@/components";
 import { URLfix } from "@persian-tools/persian-tools";
+import { TInput } from "@/components/tools/Input";
 
 const Logic: FC = (): JSX.Element => {
    const [urlInputValue, setUrlInputValue] = useState<string>("");
    const [urlResult, setUrlResult] = useState<string | undefined>("");
 
-   const urlFixerHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const urlFixerHandler = (ev: TInput) => {
       const number: string = ev.target.value;
 
       setUrlInputValue(number);

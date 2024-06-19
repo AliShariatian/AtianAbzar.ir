@@ -3,6 +3,7 @@
 import { FC, useEffect, useState } from "react";
 import { valueValidation } from "@/utils/numberValidation";
 import { Input, ResultLine, Output } from "@/components";
+import { TInput } from "@/components/tools/Input";
 
 const resultText = {
    finalPrice: { description: "مبلغی که باید پرداخت کنید", unit: "تومان" },
@@ -22,11 +23,11 @@ const Logic: FC = (): JSX.Element => {
    const discountPriceLabel: string = "مقدار تخفیف" as const;
    const discountPercentageUnit: string = "درصد" as const;
 
-   const salesPriceChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const salesPriceChangeHandler = (ev: TInput) => {
       setMainPrice(valueValidation(ev.target.value));
    };
 
-   const commissionPercentageChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const commissionPercentageChangeHandler = (ev: TInput) => {
       setDiscountPercentage(valueValidation(ev.target.value));
    };
 

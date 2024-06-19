@@ -5,6 +5,7 @@ import { ChangeEvent, FC, useState } from "react";
 import { TRadioButtonProps } from "@/components/tools/RadioButton/type";
 import { Input, RadioButton } from "@/components";
 import morse from "morse-decoder";
+import { TInput } from "@/components/tools/Input";
 
 const Logic: FC = (): JSX.Element => {
    const [normalTextInputValue, setNormalTextInputValue] = useState<string>("");
@@ -12,7 +13,7 @@ const Logic: FC = (): JSX.Element => {
 
    const [isFarsi, setIsFarsi] = useState<boolean>(false);
 
-   const textChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const textChangeHandler = (ev: TInput) => {
       const textValue: string = ev.target.value;
       const newMorse: string = morse.encode(textValue, { priority: isFarsi ? 9 : 1 });
 
@@ -20,7 +21,7 @@ const Logic: FC = (): JSX.Element => {
       setMorseInputValue(newMorse);
    };
 
-   const morseLanguageChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const morseLanguageChangeHandler = (ev: TInput) => {
       const morseValue: string = ev.target.value;
       const newText: string = morse.decode(morseValue, { priority: isFarsi ? 9 : 1 });
 

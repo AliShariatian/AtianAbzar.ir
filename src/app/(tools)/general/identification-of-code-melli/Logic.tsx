@@ -3,12 +3,13 @@
 import { FC, useState } from "react";
 import { Input, ResultLine, Output } from "@/components";
 import { verifyIranianNationalId, getPlaceByIranNationalId } from "@persian-tools/persian-tools";
+import { TInput } from "@/components/tools/Input";
 
 const Logic: FC = (): JSX.Element => {
    const [codeInputValue, setCodeInputValue] = useState<string>("");
    const [codeResult, setCodeResult] = useState<string>("هنوز عددی وارد نکردید");
 
-   const codeMelliVerifyerHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const codeMelliVerifyerHandler = (ev: TInput) => {
       const number: string = ev.target.value;
 
       setCodeInputValue(number);

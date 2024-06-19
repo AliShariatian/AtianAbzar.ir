@@ -3,6 +3,7 @@
 import { FC, useEffect, useState } from "react";
 import { valueValidation } from "@/utils/numberValidation";
 import { Input, Output, ResultLine } from "@/components";
+import { TInput } from "@/components/tools/Input";
 
 const Logic: FC = (): JSX.Element => {
    const [weight, setWeight] = useState<string>("60");
@@ -17,11 +18,11 @@ const Logic: FC = (): JSX.Element => {
 
    const resultLabel: string = "BMI" as const;
 
-   const weightChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const weightChangeHandler = (ev: TInput) => {
       setWeight(valueValidation(ev.target.value));
    };
 
-   const heightChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const heightChangeHandler = (ev: TInput) => {
       setHeight(valueValidation(ev.target.value));
    };
 

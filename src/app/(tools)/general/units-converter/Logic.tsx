@@ -6,12 +6,13 @@ import { FC, useState } from "react";
 import { valueValidation } from "@/utils/numberValidation";
 import { Input, Select, ResultLine } from "@/components";
 import { labels } from "./selectLabels";
+import { TInput } from "@/components/tools/Input";
 
 const Logic: FC = (): JSX.Element => {
    const [px, setPx] = useState<string>("16");
    const [rem, setRem] = useState<string>("1");
 
-   const pxChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const pxChangeHandler = (ev: TInput) => {
       const pxValue: string = valueValidation(ev.target.value);
       const newRem: string = (Number(pxValue) / 16).toString();
 
@@ -19,7 +20,7 @@ const Logic: FC = (): JSX.Element => {
       setRem(newRem);
    };
 
-   const remChangeHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const remChangeHandler = (ev: TInput) => {
       const remValue: string = valueValidation(ev.target.value);
       const newPx: string = (Number(remValue) * 16).toString();
 

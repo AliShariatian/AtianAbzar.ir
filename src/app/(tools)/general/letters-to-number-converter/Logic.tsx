@@ -3,12 +3,13 @@
 import { FC, useState } from "react";
 import { Input, ResultLine, Output } from "@/components";
 import { wordsToNumber } from "@persian-tools/persian-tools";
+import { TInput } from "@/components/tools/Input";
 
 const Logic: FC = (): JSX.Element => {
    const [lettersInputValue, setLettersInputValue] = useState<string>("صد و بیست");
    const [numbers, setNumbers] = useState<string | number>("120");
 
-   const letterToNumberHandler = (ev: React.ChangeEvent<HTMLInputElement>) => {
+   const letterToNumberHandler = (ev: TInput) => {
       const number: string = ev.target.value;
 
       setLettersInputValue(number);

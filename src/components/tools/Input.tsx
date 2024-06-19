@@ -3,6 +3,8 @@
 import { ChangeEvent, FC } from "react";
 import cn from "@/utils/cn";
 
+export type TInput = ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
+
 type TProps = {
    id: string;
    label: string;
@@ -11,11 +13,13 @@ type TProps = {
    unit?: string;
    min?: number;
    className?: string;
+   type?: "text" | "textArea";
    inputMode?: "search" | "text" | "email" | "tel" | "url" | "decimal" | "none" | "numeric";
    isRtl?: boolean;
    isComma?: boolean;
    isFocus?: boolean;
-   onChange: (ev: ChangeEvent<HTMLInputElement>) => void;
+   isPersianNumber?: boolean;
+   onChange: (ev: TInput) => void;
 };
 
 const Input: FC<TProps> = ({
@@ -27,27 +31,49 @@ const Input: FC<TProps> = ({
    min = 0,
    className,
    unit,
+   type = "text",
    isRtl = false,
    isComma = true,
    isFocus = false,
+   isPersianNumber = true,
    inputMode = "decimal",
 }): JSX.Element => {
+   const inputValue = isRtl ? value : isComma ? Number(value).toLocaleString() : value;
+   const inputClassName = `${isRtl ? "text-wrap text-right" : "truncate text-left"} 
+                           ${isPersianNumber === false ? "font-sans" : null} 
+                           w-full bg-transparent outline-none`;
+
    return (
       <label htmlFor={id} className={cn("userHandle border-2 border-transparent has-[:focus]:border-slate-400", className)}>
-         <div className="ml-6 flex w-fit items-center whitespace-nowrap font-semibold">{label}:</div>
+         <span className="mb-auto ml-6 flex w-fit items-center whitespace-nowrap font-semibold">{label}:</span>
 
-         <input
-            dir={isRtl ? "rtl" : "ltr"}
-            id={id}
-            type="text"
-            inputMode={inputMode}
-            autoFocus={isFocus}
-            placeholder={placeholder}
-            min={min}
-            value={isRtl ? value : isComma ? Number(value).toLocaleString() : value}
-            onChange={onChange}
-            className={`${isRtl ? "text-wrap text-right" : "truncate text-left"} w-full bg-transparent outline-none`}
-         />
+         {type === "text" ? (
+            <input
+               id={id}
+               dir={isRtl ? "rtl" : "ltr"}
+               type="text"
+               inputMode={inputMode}
+               autoFocus={isFocus}
+               placeholder={placeholder}
+               min={min}
+               value={inputValue}
+               onChange={onChange}
+               className={inputClassName}
+            />
+         ) : (
+            <div className="w-full">
+               <textarea
+                  id={id}
+                  dir={isRtl ? "rtl" : "ltr"}
+                  inputMode={inputMode}
+                  value={inputValue}
+                  onChange={onChange}
+                  autoFocus={isFocus}
+                  className={`${inputClassName} resize-y`}
+                  rows={3}
+               />
+            </div>
+         )}
 
          {unit && <div className="flex items-center whitespace-nowrap text-left text-sm">{unit}</div>}
       </label>
