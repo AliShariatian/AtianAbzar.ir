@@ -69,7 +69,8 @@ const Input: FC<TProps> = ({
                   value={inputValue}
                   onChange={onChange}
                   autoFocus={isFocus}
-                  className={`${inputClassName} resize-y`}
+                  placeholder={placeholder}
+                  className={`${inputClassName} resize-y placeholder:font-dana`}
                   rows={3}
                />
             </div>

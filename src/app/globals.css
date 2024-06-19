@@ -23,14 +23,14 @@
 /* Light / Dark mode pallet */
 :root.light {
    --slate-dark-light-mode: #f1f5f9;
-   --scrollbar-bg-dark-light-mode: #e2e8f0;
+   --scrollbar-bg-dark-light-mode: transparent;
    --scrollbar-bg-color-dark-light-mode: #94a3b8;
    --bgDotPattern-radial-gradient-color: rgba(79, 79, 79, 0.2);
 }
 
 :root.dark {
    --slate-dark-light-mode: #0f172a;
-   --scrollbar-bg-dark-light-mode: #76797c;
+   --scrollbar-bg-dark-light-mode: transparent;
    --scrollbar-bg-color-dark-light-mode: #404b5b;
    --bgDotPattern-radial-gradient-color: rgba(179, 179, 179, 0.2);
 }

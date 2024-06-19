@@ -10,8 +10,6 @@ import searchIcon from "@/public/img/search.svg";
 // Data
 import { tools, TTools } from "@/public/data/tools/tools";
 
-const OPEN_RESULT_BOX_MIN_CHARACTER_LENGTH = 2;
-
 type TProps = {
    className?: string;
 };
@@ -21,7 +19,7 @@ const SearchBox: FC<TProps> = ({ className }): JSX.Element => {
    const [searchResult, setSearchResult] = useState<TTools | null>(null);
    const [isOpenResultBox, setIsOpenResultBox] = useState<boolean>(false);
 
-   const [debouncedSearchValue, isLoading] = useDebounce({ value: searchInputValue, minValueLimit: OPEN_RESULT_BOX_MIN_CHARACTER_LENGTH }) as [string, boolean];
+   const [debouncedSearchValue, isLoading] = useDebounce({ value: searchInputValue, minValueLimit: 2 }) as [string, boolean];
 
    useEffect(() => {
       setSearchResult(tools.filter(({ title }) => (debouncedSearchValue === "" ? null : title.includes(debouncedSearchValue))));
