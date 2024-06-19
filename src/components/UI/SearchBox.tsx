@@ -33,7 +33,7 @@ const SearchBox: FC<TProps> = ({ className }): JSX.Element => {
          {isOpenResultBox && (
             <div
                onClick={() => setIsOpenResultBox(false)}
-               className="fixed left-0 top-0 z-30 h-svh w-svw bg-slate-400 opacity-40 dark:bg-slate-950 dark:opacity-80"
+               className="fixed left-0 top-0 z-30 h-svh w-svw bg-slate-800 opacity-40 dark:bg-slate-950 dark:opacity-80"
             />
          )}
 
@@ -87,14 +87,14 @@ const SearchBox: FC<TProps> = ({ className }): JSX.Element => {
                   ))}
                </ul>
             ) : isOpenResultBox && !isLoading ? (
-               <div className="absolute left-0 top-12 flex w-full flex-col items-center justify-center gap-1 rounded-xl bg-slate-50 p-5 dark:bg-slate-900">
+               <div className="absolute left-0 top-12 flex w-full flex-col items-center justify-center gap-1 rounded-xl border border-slate-200 bg-slate-50 px-5 py-8 dark:border-slate-700 dark:bg-slate-900">
                   <span className="text-lg font-bold">اوه! چیزی پیدا نشد</span>
                   <span className="text-wrap text-center font-light">سعی کن از توی لیست ابزارها هم بگردی...</span>
 
                   <Link
                      href="/#tools"
                      onClick={() => setIsOpenResultBox(false)}
-                     className="mt-5 rounded-xl border-2 bg-slate-200 px-5 py-1 font-medium shadow transition-colors hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-950 dark:hover:bg-slate-800"
+                     className="mt-9 rounded-xl border-2 bg-slate-200 px-5 py-1 font-medium shadow transition-colors hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-950 dark:hover:bg-slate-800"
                   >
                      رفتن به لیست ابزارها
                   </Link>
