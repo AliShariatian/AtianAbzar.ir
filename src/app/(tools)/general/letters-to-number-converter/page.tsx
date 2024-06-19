@@ -6,8 +6,8 @@ import { ToolPageContainer } from "@/components";
 import Logic from "./Logic";
 
 export const metadata: Metadata = {
-   title: `${metaTitle} | تبدیل حروف به عدد`,
-   description: "تبدیل حروف به عدد | تبدیل حروف فارسی به عدد | حروف به عدد",
+   title: `${metaTitle} | تبدیل آنلاین حروف به عدد`,
+   description: "تبدیل آنلاین حروف به عدد | تبدیل حروف فارسی به عدد | حروف به عدد",
 };
 
 const PxRem: FC = (): JSX.Element => {

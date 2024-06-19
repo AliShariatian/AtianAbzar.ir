@@ -6,8 +6,8 @@ import { ToolPageContainer } from "@/components";
 import Logic from "./Logic";
 
 export const metadata: Metadata = {
-   title: `${metaTitle} | محاسبه درصد تخفیف`,
-   description: "محاسبه تخفیف | تخفیف | ماشین حساب تخفیف",
+   title: `${metaTitle} | محاسبه آنلاین درصد تخفیف`,
+   description: "محاسبه آنلاین تخفیف | تخفیف | ماشین آنلاین حساب تخفیف",
 };
 
 const CalcPercentageDiscount: FC = (): JSX.Element => {

@@ -20,7 +20,7 @@ let general: TTools = [
 
 let engineering: TTools = [
    { title: "تبدیل آنلاین کسر به درصد", slug: "fraction-to-percentage-converter" },
-   { title: "محاسبه آنلاین درصد", slug: "calc-percentage" },
+   { title: "محاسبه آنلاین درصد از مقدار", slug: "calc-percentage" },
 ];
 
 let sports: TTools = [{ title: "بزودی", slug: "#" }];

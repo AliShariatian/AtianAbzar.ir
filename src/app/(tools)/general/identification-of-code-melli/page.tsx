@@ -6,7 +6,7 @@ import { ToolPageContainer } from "@/components";
 import Logic from "./Logic";
 
 export const metadata: Metadata = {
-   title: `${metaTitle} | تشخیص کد ملی`,
+   title: `${metaTitle} | تشخیص آنلاین کد ملی`,
    description: "صحت سنجی کد ملی | درست بودن کد ملی | کد ملی | شهر کد ملی | کد ملی برای کدام شهر است | استعلام کد ملی",
 };
 

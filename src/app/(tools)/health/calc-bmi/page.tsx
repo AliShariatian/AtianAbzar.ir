@@ -6,8 +6,8 @@ import { ToolPageContainer } from "@/components";
 import Logic from "./Logic";
 
 export const metadata: Metadata = {
-   title: `${metaTitle} | محاسبه bmi`,
-   description: "محاسبه bmi | bmi | محاسبه شاخص توده بدنی | شاخص توده بدنی",
+   title: `${metaTitle} |  محاسبه آنلاین bmi`,
+   description: "محاسبه bmi | bmi | محاسبه آنلاین شاخص توده بدنی | شاخص توده بدنی",
 };
 
 const CalcBMI: FC = (): JSX.Element => {

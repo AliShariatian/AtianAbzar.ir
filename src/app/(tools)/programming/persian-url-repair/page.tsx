@@ -6,8 +6,8 @@ import { ToolPageContainer } from "@/components";
 import Logic from "./Logic";
 
 export const metadata: Metadata = {
-   title: `${metaTitle} | ترمیم لینک (URL) فارسی`,
-   description: "ترمیم لینک فارسی | اصلاح لینک فارسی | ترمیم URL فارسی | اصلاح URL فارسی",
+   title: `${metaTitle} | ترمیم آنلاین لینک (URL) فارسی`,
+   description: "ترمیم آنلاین لینک فارسی | اصلاح لینک فارسی | ترمیم URL فارسی | اصلاح URL فارسی",
 };
 
 const PxRem: FC = (): JSX.Element => {

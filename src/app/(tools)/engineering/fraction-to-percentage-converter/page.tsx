@@ -6,8 +6,8 @@ import { ToolPageContainer } from "@/components";
 import Logic from "./Logic";
 
 export const metadata: Metadata = {
-   title: `${metaTitle} | تبدیل کسر به درصد`,
-   description: "کسر به درصد | محاسبه کسر به درصد | ماشین حساب کسر به درصد",
+   title: `${metaTitle} | تبدیل آنلاین کسر به درصد`,
+   description: "کسر به درصد | محاسبه آنلاین کسر به درصد | ماشین حساب کسر به درصد",
 };
 
 const CalcPercentageDiscount: FC = (): JSX.Element => {

@@ -6,7 +6,7 @@ import { ToolPageContainer } from "@/components";
 import Logic from "./Logic";
 
 export const metadata: Metadata = {
-   title: `${metaTitle} | تبدیل واحد`,
+   title: `${metaTitle} | تبدیل آنلاین واحد`,
    description: "تبدیل واحد",
 };
 
