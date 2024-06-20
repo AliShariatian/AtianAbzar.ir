@@ -45,7 +45,7 @@ const Input: FC<TProps> = ({
 
    return (
       <label htmlFor={id} className={cn("userHandle border-2 border-transparent has-[:focus]:border-slate-400", className)}>
-         <span className="mb-auto ml-6 flex w-fit items-center whitespace-nowrap font-semibold">{label}:</span>
+         <span className="mb-auto ml-3 flex w-fit items-center whitespace-nowrap font-semibold">{label}:</span>
 
          {type === "text" ? (
             <input
