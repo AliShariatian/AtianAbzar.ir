@@ -1,10 +1,17 @@
 "use client";
 
 import { ChangeEvent, FC, useEffect, useState } from "react";
-import cn from "@/utils/cn";
 import useDebounce from "@/hook/useDebounce";
+
+// Utils
+import { replaceToolTitle } from "@/utils/replaceToolTitle";
+import cn from "@/utils/cn";
+
+// Components
 import Link from "next/link";
 import Image from "next/image";
+
+// Image
 import searchIcon from "@/public/img/search.svg";
 
 // Data
@@ -69,17 +76,18 @@ const SearchBox: FC<TProps> = ({ className }): JSX.Element => {
 
             {/* Result */}
             {isOpenResultBox && !!searchResult?.length ? (
-               <ul className="absolute left-0 top-12 max-h-48 min-h-12 w-full overflow-x-hidden overflow-y-scroll rounded-xl border border-slate-200 bg-slate-50 py-1 shadow *:w-full *:border-b-2 *:border-slate-200 *:px-7 *:py-3 *:transition-colors last:*:border-none hover:*:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:*:border-slate-800 dark:hover:*:bg-slate-950 [&>li>a]:line-clamp-1">
+               <ul className="absolute left-0 top-12 max-h-48 min-h-12 w-full overflow-x-hidden overflow-y-scroll rounded-xl border border-slate-200 bg-slate-50 py-1 shadow *:w-full *:border-b-2 *:border-slate-200 *:transition-colors last:*:border-none hover:*:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:*:border-slate-800 dark:hover:*:bg-slate-950 [&>li>a]:line-clamp-1 [&>li>a]:size-full [&>li>a]:px-7 [&>li>a]:py-3">
                   {searchResult?.map(({ title, slug }, index) => (
                      <li className="" key={index}>
                         <Link
                            href={`/${slug}`}
+                           title={title}
                            onClick={() => {
                               setSearchInputValue("");
                               setIsOpenResultBox(false);
                            }}
                         >
-                           {title}
+                           {replaceToolTitle(title)}
                         </Link>
                      </li>
                   ))}

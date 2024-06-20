@@ -1,6 +1,8 @@
 import { CSSProperties, FC } from "react";
-import Link from "next/link";
+import { replaceToolTitle } from "@/utils/replaceToolTitle";
 import cn from "@/utils/cn";
+// Components
+import Link from "next/link";
 import Image from "next/image";
 
 type TProps = {
@@ -14,7 +16,7 @@ type TProps = {
 const VitrineButton: FC<TProps> = ({ title, slug, className, icon, onClick }): JSX.Element => {
    const hoverScaleValue = { "--hover-scale-value": 1.04 } as CSSProperties;
 
-   const buttonLabel: string = title.replace("آنلاین", "");
+   const buttonLabel: string = replaceToolTitle(title);
 
    return (
       <Link
