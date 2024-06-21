@@ -10,11 +10,11 @@ export const metadata: Metadata = {
    description: "تبدیل کد مورس | محاسبه آنلاین کد مورس | کد مورس | کد مورس همستر | مترجم آنلاین کد مورس | تبدیل آنلاین کننده کد مورس | مورس | morse code | morse code translator",
 };
 
-const PxRem: FC = (): JSX.Element => {
+const MorseCodeTranslator: FC = (): JSX.Element => {
    const topSide = <Logic />;
    const bottomSide = "";
 
    return <ToolPageContainer bottomSide={bottomSide} topSide={topSide} />;
 };
 
-export default PxRem;
+export default MorseCodeTranslator;

@@ -10,11 +10,11 @@ export const metadata: Metadata = {
    description: "صحت سنجی کد ملی | درست بودن کد ملی | کد ملی | شهر کد ملی | کد ملی برای کدام شهر است | استعلام کد ملی",
 };
 
-const PxRem: FC = (): JSX.Element => {
+const IdentificationOfCodeMelli: FC = (): JSX.Element => {
    const topSide = <Logic />;
    const bottomSide = "";
 
    return <ToolPageContainer bottomSide={bottomSide} topSide={topSide} />;
 };
 
-export default PxRem;
+export default IdentificationOfCodeMelli;

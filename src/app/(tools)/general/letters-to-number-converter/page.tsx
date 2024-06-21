@@ -10,11 +10,11 @@ export const metadata: Metadata = {
    description: "تبدیل آنلاین حروف به عدد | تبدیل حروف فارسی به عدد | حروف به عدد",
 };
 
-const PxRem: FC = (): JSX.Element => {
+const LettersToNumberConverter: FC = (): JSX.Element => {
    const topSide = <Logic />;
    const bottomSide = "";
 
    return <ToolPageContainer bottomSide={bottomSide} topSide={topSide} />;
 };
 
-export default PxRem;
+export default LettersToNumberConverter;

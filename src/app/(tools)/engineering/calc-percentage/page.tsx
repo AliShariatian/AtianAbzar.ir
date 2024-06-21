@@ -10,11 +10,11 @@ export const metadata: Metadata = {
    description: "محاسبه آنلاین درصد | ماشین حساب درصد",
 };
 
-const CalcPercentageDiscount: FC = (): JSX.Element => {
+const CalcPercentage: FC = (): JSX.Element => {
    const topSide = <Logic />;
    const bottomSide = "";
 
    return <ToolPageContainer bottomSide={bottomSide} topSide={topSide} />;
 };
 
-export default CalcPercentageDiscount;
+export default CalcPercentage;

@@ -10,11 +10,11 @@ export const metadata: Metadata = {
    description: "کسر به درصد | محاسبه آنلاین کسر به درصد | ماشین حساب کسر به درصد",
 };
 
-const CalcPercentageDiscount: FC = (): JSX.Element => {
+const FractionToPercentageConverter: FC = (): JSX.Element => {
    const topSide = <Logic />;
    const bottomSide = "";
 
    return <ToolPageContainer bottomSide={bottomSide} topSide={topSide} />;
 };
 
-export default CalcPercentageDiscount;
+export default FractionToPercentageConverter;

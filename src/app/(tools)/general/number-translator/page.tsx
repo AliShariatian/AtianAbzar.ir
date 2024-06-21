@@ -10,11 +10,11 @@ export const metadata: Metadata = {
    description: "تبدیل آنلاین اعداد | تبدیل عدد فارسی به انگلیسی | تبدیل اعداد",
 };
 
-const PxRem: FC = (): JSX.Element => {
+const NumberTranslator: FC = (): JSX.Element => {
    const topSide = <Logic />;
    const bottomSide = "";
 
    return <ToolPageContainer bottomSide={bottomSide} topSide={topSide} />;
 };
 
-export default PxRem;
+export default NumberTranslator;

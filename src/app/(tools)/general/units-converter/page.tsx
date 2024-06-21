@@ -10,11 +10,11 @@ export const metadata: Metadata = {
    description: "تبدیل واحد",
 };
 
-const PxRem: FC = (): JSX.Element => {
+const UnitConverter: FC = (): JSX.Element => {
    const topSide = <Logic />;
    const bottomSide = "";
 
    return <ToolPageContainer bottomSide={bottomSide} topSide={topSide} />;
 };
 
-export default PxRem;
+export default UnitConverter;

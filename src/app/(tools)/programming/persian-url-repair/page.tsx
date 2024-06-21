@@ -10,11 +10,11 @@ export const metadata: Metadata = {
    description: "ترمیم آنلاین لینک فارسی | اصلاح لینک فارسی | ترمیم URL فارسی | اصلاح URL فارسی",
 };
 
-const PxRem: FC = (): JSX.Element => {
+const PersianUrlRepair: FC = (): JSX.Element => {
    const topSide = <Logic />;
    const bottomSide = "";
 
    return <ToolPageContainer bottomSide={bottomSide} topSide={topSide} />;
 };
 
-export default PxRem;
+export default PersianUrlRepair;
