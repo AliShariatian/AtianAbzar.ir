@@ -1,7 +1,7 @@
 import { ChangeEvent } from "react";
 
 export type TRadioButtonProps = {
-   title: string;
+   title?: null | string;
    props: {
       id: string;
       label: string;

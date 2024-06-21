@@ -13,6 +13,7 @@ let general: TTools = [
    { title: "تبدیل آنلاین حروف به عدد", slug: "letters-to-number-converter" },
    { title: "مترجم آنلاین کد مورس", slug: "morse-code-translator" },
    { title: "تبدیل آنلاین اعداد فارسی و انگلیسی", slug: "number-translator" },
+   { title: "کرنومتر آنلاین", slug: "chronometer" },
 
    // { title: "تشخیص کد ملی", slug: "identification-of-code-melli" }, // Have bug
    // { title: "تبدیل واحد", slug: "units-converter" }
