@@ -100,7 +100,7 @@ const Logic: FC = (): JSX.Element => {
                         <li key={index} className="flex items-center justify-between gap-4">
                            <span className="text-center">{index + 1}.</span>
                            <span className="text-left">
-                              {millisecond} : {minute} : {second}
+                              {millisecond} : {second} : {minute}
                            </span>
                         </li>
                      ))}

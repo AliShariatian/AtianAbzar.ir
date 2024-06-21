@@ -9,7 +9,7 @@ const RadioButtons: FC<TGroupButtonsProps> = ({ props }): JSX.Element => {
             <button
                key={label}
                onClick={onClick}
-               className="flex w-full cursor-pointer items-center justify-center border-b-4 border-transparent py-3 hover:bg-slate-100 active:border-slate-400 dark:hover:bg-slate-700"
+               className="flex w-full cursor-pointer items-center justify-center border-b-4 border-transparent py-3 hover:bg-slate-100 active:bg-slate-200 dark:hover:bg-slate-700 active:dark:bg-slate-800"
             >
                {label}
             </button>
