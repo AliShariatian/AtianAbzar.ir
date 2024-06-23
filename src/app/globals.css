@@ -14,6 +14,10 @@
    .userHandle {
       @apply flex w-full flex-row items-center justify-between gap-2 rounded-xl bg-slate-50 px-7 py-4 text-base shadow dark:bg-slate-800 xl:text-lg;
    }
+
+   .btnGreen {
+      @apply rounded-xl bg-green-500 px-6 py-2 text-base text-slate-100 outline -outline-offset-4 outline-green-500 transition-[outline-offset] hover:outline-offset-4 dark:bg-green-600 dark:outline-green-600 xl:text-2xl;
+   }
 }
 
 :root {

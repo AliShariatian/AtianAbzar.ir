@@ -33,7 +33,10 @@ let finance: TTools = [
 
 let health: TTools = [{ title: "محاسبه آنلاین شاخص توده بدنی (BMI)", slug: "calc-bmi" }];
 
-let programming: TTools = [{ title: "ترمیم آنلاین لینک (URL) فارسی", slug: "persian-url-repair" }];
+let programming: TTools = [
+   { title: "ترمیم آنلاین لینک (URL) فارسی", slug: "persian-url-repair" },
+   { title: "آدرس آی پی (ip) من چیست؟", slug: "what-is-my-ip-address" },
+];
 
 // ---------------------------------------------------------------------------------------------------------
 // Add category, and Add category to slug

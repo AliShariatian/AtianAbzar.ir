@@ -6,9 +6,10 @@ type TProps = {
    isRtl?: boolean;
    description?: string;
    borderColor?: string;
+   isPersianNumber?: boolean;
 };
 
-const Output: FC<TProps> = ({ value, description, borderColor, unit, isRtl = false }): JSX.Element => {
+const Output: FC<TProps> = ({ value, description, borderColor, unit, isRtl = false, isPersianNumber = true }): JSX.Element => {
    return (
       <div className={`${borderColor} ${borderColor ? "ring-4" : null} userHandle`}>
          {/* Description */}
@@ -18,7 +19,10 @@ const Output: FC<TProps> = ({ value, description, borderColor, unit, isRtl = fal
             {unit && <label className="mr-2 flex items-center whitespace-nowrap text-right text-sm">{unit}</label>}
 
             {/* Result */}
-            <span dir={isRtl ? "rtl" : "ltr"} className={`${isRtl ? "text-right" : "text-left"} my-auto select-all bg-transparent`}>
+            <span
+               dir={isRtl ? "rtl" : "ltr"}
+               className={`${isRtl ? "text-right" : "text-left"} ${isPersianNumber ? null : "font-sans"} my-auto select-all bg-transparent`}
+            >
                {isRtl ? (value as string) : value?.toLocaleString()}
             </span>
          </div>
