@@ -35,7 +35,8 @@ let health: TTools = [{ title: "محاسبه آنلاین شاخص توده بد
 
 let programming: TTools = [
    { title: "ترمیم آنلاین لینک (URL) فارسی", slug: "persian-url-repair" },
-   { title: "آدرس آی پی (ip) من چیست؟", slug: "what-is-my-ip-address" },
+   
+   // { title: "آدرس آی پی (ip) من چیست؟", slug: "what-is-my-ip-address" },
 ];
 
 // ---------------------------------------------------------------------------------------------------------
