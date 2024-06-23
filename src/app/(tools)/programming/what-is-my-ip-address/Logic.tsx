@@ -11,11 +11,11 @@ const Logic: FC = (): JSX.Element => {
    const [error, setError] = useState<string | null>(null);
 
    const getIpData = () => {
-      fetch("http://api.ipify.org/?format=json")
-         .then((response) => response.json())
-         .then((data) => {
+      fetch("http://api.ipify.org")
+         .then((response) => response.text())
+         .then((ip) => {
             setError(null);
-            return fetch(`http://ip-api.com/json/${data.ip}`);
+            return fetch(`http://ip-api.com/json/${ip}`);
          })
          .then((response) => response.json())
          .then((data) => {
