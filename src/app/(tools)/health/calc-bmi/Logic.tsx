@@ -34,11 +34,11 @@ const Logic: FC = (): JSX.Element => {
             setResult({ value: resultValue, color: "ring-pink-500", description: "کمبود وزن دارید" });
             break;
 
-         case 18.5 <= resultValue && resultValue < 24.9:
+         case 18.5 <= resultValue && resultValue < 25:
             setResult({ value: resultValue, color: "ring-green-500", description: "وزن مناسب دارید" });
             break;
 
-         case 25 <= resultValue && resultValue < 29.9:
+         case 25 <= resultValue && resultValue < 30:
             setResult({ value: resultValue, color: "ring-fuchsia-500", description: "اضافه وزن دارید" });
             break;
 
