@@ -1,6 +1,7 @@
 "use client";
 
 import { FC, useEffect, useState } from "react";
+import axios from "axios";
 import { Output } from "@/components";
 import { TIpData } from "./type";
 
@@ -11,13 +12,14 @@ const Logic: FC = (): JSX.Element => {
    const [error, setError] = useState<string | null>(null);
 
    const getIpData = () => {
-      fetch("http://api.ipify.org")
-         .then((response) => response.text())
+      axios
+         .get("http://api.ipify.org")
+         .then((response) => response.data)
          .then((ip) => {
             setError(null);
-            return fetch(`http://ip-api.com/json/${ip}`);
+            return axios.get(`http://ip-api.com/json/${ip}`);
          })
-         .then((response) => response.json())
+         .then((response) => response.data)
          .then((data) => {
             setError(null);
             setIpData(data);
